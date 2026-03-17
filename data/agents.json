@@ -1,0 +1,404 @@
+[
+  {
+    "slug": "arcreach",
+    "name": "ArcReach",
+    "color": "#3B82F6",
+    "tagline": "Autonomous Outbound Sales",
+    "badge": "Sales Automation",
+    "description": "ArcReach identifies high-value prospects, researches each target company and contact, and executes multi-channel outbound sequences across email, LinkedIn, and phone — all with CRM-native personalization at scale.",
+    "problem": {
+      "title": "Manual prospecting is costing you pipeline",
+      "body": "Sales teams waste 70% of their time on research and outreach that yields inconsistent results. Human-driven prospecting doesn't scale — and when reps leave, the knowledge leaves with them.",
+      "before": [
+        "14+ days average from target to first meaningful reply",
+        "62% of leads go cold before any contact attempt",
+        "SDR ramp time of 3-6 months before full productivity",
+        "No consistency in messaging across the team",
+        "CRM data decays at 30% per year"
+      ],
+      "after": [
+        "First outreach in under 60 seconds of prospect identification",
+        "98% of leads contacted within the same business day",
+        "Zero ramp time — ArcReach is fully trained in 14 days",
+        "100% consistent, personalized messaging at any volume",
+        "CRM enriched with 40+ data points per contact, automatically"
+      ]
+    },
+    "features": [
+      { "icon": "Target", "name": "Multi-Channel Prospecting", "description": "Autonomous outreach via email, LinkedIn, and phone — orchestrated as a unified sequence." },
+      { "icon": "Sparkles", "name": "Dynamic Personalization", "description": "Every message is crafted using company intelligence, role signals, and CRM context." },
+      { "icon": "RefreshCw", "name": "Auto-Sequencing", "description": "Intelligent follow-up timing that adapts based on prospect behavior and engagement signals." },
+      { "icon": "BarChart2", "name": "A/B Testing at Scale", "description": "Continuously tests message variants and optimizes for reply rate, meeting rate, and pipeline conversion." },
+      { "icon": "Users", "name": "Human Handoff", "description": "Triggers seamless transition to human reps at the exact moment engagement threshold is crossed." },
+      { "icon": "Database", "name": "CRM-Native Sync", "description": "All activity logged, all contacts enriched, all sequences tracked — directly in your CRM." }
+    ],
+    "steps": [
+      { "step": "01", "title": "Define Your ICP", "description": "ArcReach is trained on your Ideal Customer Profile, including firmographic filters, tech stack signals, and buying triggers." },
+      { "step": "02", "title": "Discover & Research", "description": "The agent continuously identifies new prospects and enriches each record with 40+ data points before crafting any outreach." },
+      { "step": "03", "title": "Engage & Convert", "description": "Multi-channel sequences run autonomously. ArcReach adapts timing, channel, and message based on prospect behavior until a meeting is booked." }
+    ],
+    "integrations": ["Salesforce", "HubSpot", "LinkedIn Sales Navigator", "Outreach", "Apollo", "Clay", "Slack", "Gmail"],
+    "metrics": [
+      { "value": "3.2x", "label": "Pipeline Growth", "description": "Average qualified pipeline increase within first 60 days" },
+      { "value": "67%", "label": "Lower CAC", "description": "Reduction in customer acquisition cost versus manual SDR outreach" },
+      { "value": "8s", "label": "First Contact", "description": "Average time from prospect identification to first outreach" },
+      { "value": "18 days", "label": "Time to Meeting", "description": "Average time from first contact to booked discovery call" }
+    ],
+    "faqs": [
+      { "question": "How does ArcReach personalize at scale without feeling generic?", "answer": "ArcReach pulls real-time intelligence from the prospect's company website, LinkedIn, CRM history, news mentions, and technology stack. Every message references something specific and timely — it never relies on merge-tag templates." },
+      { "question": "Can ArcReach handle enterprise-level compliance requirements for outreach?", "answer": "Yes. ArcReach operates within configurable guardrails including opt-out management, GDPR/CAN-SPAM compliance, daily send limits, and blacklisted domain filters. All activity is fully auditable." },
+      { "question": "How long before ArcReach starts producing results?", "answer": "Most clients see qualified replies within the first week of deployment. Full pipeline ramp typically takes 30-45 days as the agent optimizes based on your specific audience's response patterns." },
+      { "question": "Does ArcReach replace our SDR team?", "answer": "ArcReach handles the top-of-funnel research and outreach that consumes 70% of an SDR's time. Your SDRs focus on the conversations that matter — ArcReach ensures their calendar is full." },
+      { "question": "What CRM systems does ArcReach integrate with?", "answer": "ArcReach has native integrations with Salesforce, HubSpot, Pipedrive, and Copper. For other CRMs, we provide a webhook-based integration layer during the onboarding process." }
+    ],
+    "dashboardData": {
+      "metrics": [
+        { "value": "1,247", "label": "Prospects Reached Today" },
+        { "value": "89", "label": "Replies Received" },
+        { "value": "12", "label": "Meetings Booked" },
+        { "value": "67%", "label": "Open Rate" }
+      ],
+      "chartType": "line",
+      "chartData": [
+        { "day": "Mon", "value": 820 },
+        { "day": "Tue", "value": 932 },
+        { "day": "Wed", "value": 1100 },
+        { "day": "Thu", "value": 987 },
+        { "day": "Fri", "value": 1247 },
+        { "day": "Sat", "value": 1050 },
+        { "day": "Sun", "value": 1180 }
+      ],
+      "feedEntries": [
+        "Email sent to VP Sales @ Nexora Corp",
+        "LinkedIn connect accepted by Sarah Chen, Head of RevOps",
+        "Follow-up #2 triggered for Marcus Webb @ Veldric",
+        "Meeting booked: James Park, CRO @ SentinelAI — Thursday 2pm",
+        "Sequence paused: OmniCore (reply detected — routing to rep)",
+        "A/B test: Subject line 'Your Q1 pipeline gap' winning at 34% open rate",
+        "New prospect identified: Pyramus Group (Series B, 200 employees)",
+        "Email sent to CEO @ Pyramus Group"
+      ],
+      "messages": []
+    }
+  },
+  {
+    "slug": "arcqual",
+    "name": "ArcQual",
+    "color": "#0891B2",
+    "tagline": "Intelligent Lead Qualification",
+    "badge": "Lead Intelligence",
+    "description": "ArcQual processes every inbound lead in real-time — scoring against your ICP, analyzing behavioral intent, enriching with 40+ data points, and routing to the right rep in under 8 seconds.",
+    "problem": {
+      "title": "Unqualified leads are destroying your team's productivity",
+      "body": "Sales reps spend hours chasing leads that were never going to convert. Without real-time qualification, hot leads go cold while your team is stuck on poor-fit prospects.",
+      "before": [
+        "Average 47-minute response time to new inbound leads",
+        "Only 22% of leads match actual ICP criteria",
+        "Manual enrichment takes 15-20 minutes per record",
+        "No behavioral context — reps call blind",
+        "Inconsistent routing based on rep availability"
+      ],
+      "after": [
+        "Every lead scored and routed in under 8 seconds",
+        "94% qualification accuracy against ICP model",
+        "40+ data points enriched automatically per lead",
+        "Full behavioral and intent context delivered to rep",
+        "Rule-based smart routing by tier, vertical, and deal size"
+      ]
+    },
+    "features": [
+      { "icon": "Zap", "name": "Real-Time Lead Scoring", "description": "Instant ICP match scoring the moment a lead enters your system — no waiting, no batching." },
+      { "icon": "TrendingUp", "name": "Intent Signal Analysis", "description": "Analyzes behavioral signals including page visits, content downloads, and engagement patterns." },
+      { "icon": "Layers", "name": "Auto-Segmentation", "description": "Automatically segments leads by tier, vertical, deal size, and buying stage." },
+      { "icon": "GitBranch", "name": "Smart Routing", "description": "Directs each qualified lead to the optimal rep based on territory, expertise, and capacity." },
+      { "icon": "Database", "name": "40+ Point Enrichment", "description": "Enriches every record with firmographic, technographic, and contact-level data in seconds." },
+      { "icon": "RefreshCw", "name": "Model Self-Improvement", "description": "The qualification model learns from closed-won/lost outcomes to continuously improve accuracy." }
+    ],
+    "steps": [
+      { "step": "01", "title": "Capture & Enrich", "description": "Every lead that enters your funnel is instantly enriched with 40+ data points from public and proprietary sources." },
+      { "step": "02", "title": "Score & Segment", "description": "ArcQual scores the lead against your ICP, assigns a tier (A/B/C/D), and flags high-intent behavioral signals." },
+      { "step": "03", "title": "Route & Notify", "description": "Qualified leads are instantly routed to the right rep with full context — score, segment, enrichment data, and suggested talking points." }
+    ],
+    "integrations": ["Salesforce", "HubSpot", "Marketo", "Pardot", "Clearbit", "ZoomInfo", "6sense", "Drift"],
+    "metrics": [
+      { "value": "94%", "label": "Qualification Accuracy", "description": "Average ICP match accuracy across all deployed clients" },
+      { "value": "8s", "label": "Response Time", "description": "Average time from lead submission to qualified routing" },
+      { "value": "40+", "label": "Enrichment Points", "description": "Data points added to every lead record automatically" },
+      { "value": "3.1x", "label": "Rep Productivity", "description": "Increase in rep output when working ArcQual-qualified leads" }
+    ],
+    "faqs": [
+      { "question": "How does ArcQual define 'qualified' — can we customize the criteria?", "answer": "Completely. During onboarding, we build your ICP model collaboratively — including firmographic filters, technographic signals, geographic rules, and behavioral thresholds. The scoring model is yours and fully editable." },
+      { "question": "What happens to leads that don't qualify?", "answer": "Non-qualifying leads are automatically tagged, placed in a nurture sequence, and scheduled for re-evaluation at a defined interval. Nothing gets deleted — it gets parked intelligently." },
+      { "question": "Can ArcQual handle high-volume inbound from paid campaigns?", "answer": "Yes. ArcQual is designed for burst traffic and can process thousands of leads simultaneously with sub-10-second response times regardless of volume spikes." },
+      { "question": "How accurate is the enrichment data?", "answer": "ArcQual uses a waterfall enrichment model, pulling from multiple data providers in sequence to maximize coverage. Average enrichment accuracy is 92% for contact-level fields and 98% for company-level fields." },
+      { "question": "Does ArcQual integrate with our existing marketing automation?", "answer": "Yes — ArcQual has native integrations with Marketo, Pardot, HubSpot, and Eloqua. It sits between your lead capture and CRM layers, adding qualification and enrichment transparently." }
+    ],
+    "dashboardData": {
+      "metrics": [
+        { "value": "342", "label": "Leads Scored Today" },
+        { "value": "94%", "label": "Accuracy Rate" },
+        { "value": "48", "label": "A-Tier Leads" },
+        { "value": "7.2s", "label": "Avg Response" }
+      ],
+      "chartType": "bar",
+      "chartData": [
+        { "tier": "A-Tier", "value": 48 },
+        { "tier": "B-Tier", "value": 112 },
+        { "tier": "C-Tier", "value": 134 },
+        { "tier": "D-Tier", "value": 48 }
+      ],
+      "feedEntries": [
+        "Lead scored A-Tier: Emily Zhao, Head of Sales @ DataStack Inc",
+        "Enrichment complete: Nexora Corp — 47 data points added",
+        "B-Tier lead routed to nurture sequence: John Mills @ Startup Co",
+        "Intent signal detected: 3 pricing page visits — Veldric Group",
+        "A-Tier alert: Pyramus Group matches 98% ICP — assigned to Priya S.",
+        "CRM updated: 34 leads enriched in last 5 minutes",
+        "Model update: Q2 ICP refinement applied — accuracy improved to 94.3%"
+      ],
+      "statusItems": [
+        { "name": "Emily Zhao @ DataStack", "score": "A", "status": "active" },
+        { "name": "Marcus Webb @ Veldric", "score": "B", "status": "warning" },
+        { "name": "John Mills @ Startup Co", "score": "D", "status": "critical" },
+        { "name": "Sarah Chen @ Nexora", "score": "A", "status": "active" },
+        { "name": "Raj Patel @ OmniCore", "score": "B", "status": "active" }
+      ]
+    }
+  },
+  {
+    "slug": "arcboard",
+    "name": "ArcBoard",
+    "color": "#059669",
+    "tagline": "Client Onboarding Automation",
+    "badge": "Onboarding Intelligence",
+    "description": "ArcBoard compresses multi-week manual onboarding into hours. It manages document collection, KYC/AML verification, compliance checks, and guided walkthroughs — with 100% audit traceability and zero client frustration.",
+    "problem": {
+      "title": "Slow onboarding is losing you clients before they start",
+      "body": "Every day a new client spends in a broken onboarding process is a day they second-guess their decision. Manual workflows, email chains, and siloed systems create friction that damages first impressions permanently.",
+      "before": [
+        "14-day average onboarding cycle across enterprise clients",
+        "37% of clients report frustration with document requests",
+        "Operations teams spending 80% of time on repetitive paperwork",
+        "No real-time visibility into onboarding progress",
+        "Compliance exceptions discovered late — causing re-work cycles"
+      ],
+      "after": [
+        "Full onboarding completed in under 4 hours",
+        "Automated document collection with guided client portal",
+        "Operations freed to focus on relationship-building",
+        "Real-time progress dashboard for ops and clients alike",
+        "Compliance checks run in parallel — no sequential bottlenecks"
+      ]
+    },
+    "features": [
+      { "icon": "FileCheck", "name": "Automated Doc Collection", "description": "Sends structured document requests with smart reminders and deadline tracking." },
+      { "icon": "Shield", "name": "KYC/AML Verification", "description": "Full identity and anti-money laundering compliance orchestration built into every onboarding flow." },
+      { "icon": "GitBranch", "name": "Adaptive Sequences", "description": "Onboarding steps adapt per client tier, product configuration, and regulatory requirements." },
+      { "icon": "Monitor", "name": "Client-Facing Portal", "description": "A clean progress portal showing clients exactly where they are and what's needed next." },
+      { "icon": "AlertTriangle", "name": "Smart Escalation", "description": "Detects exceptions and escalates to a human manager with full context and recommended resolution." },
+      { "icon": "ClipboardCheck", "name": "Full Audit Trail", "description": "Every action, document, and decision is logged with timestamp and actor for complete compliance traceability." }
+    ],
+    "steps": [
+      { "step": "01", "title": "Trigger & Personalize", "description": "The moment a contract is signed, ArcBoard triggers a personalized onboarding sequence based on the client's tier, product, and jurisdiction." },
+      { "step": "02", "title": "Collect & Verify", "description": "ArcBoard guides the client through document submission, runs real-time KYC/AML checks, and handles compliance validation in parallel — not sequentially." },
+      { "step": "03", "title": "Activate & Handoff", "description": "Once complete, ArcBoard activates the client's account, sends confirmation, and performs a warm handoff to the success team with full context." }
+    ],
+    "integrations": ["Salesforce", "DocuSign", "Stripe", "Plaid", "Jumio", "HubSpot", "Slack", "Zendesk"],
+    "metrics": [
+      { "value": "73%", "label": "Faster Onboarding", "description": "Reduction in time-to-active from contract to fully onboarded client" },
+      { "value": "98.2%", "label": "Doc Accuracy", "description": "Document verification accuracy across all compliance workflows" },
+      { "value": "4 hrs", "label": "Average Time", "description": "From signed contract to fully activated client account" },
+      { "value": "$4.2M", "label": "Annual Savings", "description": "Average annual operational cost savings for enterprise deployments" }
+    ],
+    "faqs": [
+      { "question": "Can ArcBoard handle regulated industry requirements like HIPAA or FCA?", "answer": "Yes. ArcBoard's compliance engine is configurable per jurisdiction and industry. We have pre-built compliance packs for financial services (FCA, SEC, FINRA), healthcare (HIPAA), and legal (GDPR, CCPA)." },
+      { "question": "What happens if a client doesn't complete their onboarding steps?", "answer": "ArcBoard manages follow-up sequences automatically — escalating from email nudges, to SMS, to a scheduled call with your ops team if a deadline is missed. Escalation thresholds are fully configurable." },
+      { "question": "How does ArcBoard handle document verification?", "answer": "ArcBoard uses a layered verification approach: format validation, metadata checks, AI-powered content extraction, and where required, integration with third-party identity verification providers like Jumio or Onfido." },
+      { "question": "Can clients track their own onboarding progress?", "answer": "Yes. Every onboarding instance comes with a client-facing progress portal that shows completed steps, pending items, and estimated completion time. No login required — accessed via secure link." },
+      { "question": "How does ArcBoard integrate with our existing contract and billing systems?", "answer": "ArcBoard has native integrations with DocuSign, Adobe Sign, Stripe, and Chargebee. The trigger for onboarding can be a signed contract, a payment confirmation, or a manual CRM stage change." }
+    ],
+    "dashboardData": {
+      "metrics": [
+        { "value": "23", "label": "Active Onboardings" },
+        { "value": "3.8 hrs", "label": "Avg Duration" },
+        { "value": "98.2%", "label": "Doc Accuracy" },
+        { "value": "2", "label": "Escalations Today" }
+      ],
+      "chartType": "bar",
+      "chartData": [],
+      "feedEntries": [],
+      "progressItems": [
+        { "client": "Nexora Corp", "stage": "KYC Verification", "percent": 80 },
+        { "client": "Veldric Group", "stage": "Document Collection", "percent": 55 },
+        { "client": "SentinelAI Ltd", "stage": "Compliance Check", "percent": 20 },
+        { "client": "Pyramus Inc", "stage": "Account Activation", "percent": 100 }
+      ]
+    }
+  },
+  {
+    "slug": "arcdesk",
+    "name": "ArcDesk",
+    "color": "#7C3AED",
+    "tagline": "AI-Native Support Operations",
+    "badge": "Support Automation",
+    "description": "ArcDesk resolves customer support tickets autonomously with deep context. It queries knowledge bases, executes in-product actions, and learns from every resolution — handling 89% of tickets without human intervention.",
+    "problem": {
+      "title": "Your support team is drowning in tickets",
+      "body": "Tier-1 support is eating your team alive. Repetitive tickets consume 60% of support capacity, response times suffer, and CSAT scores drop — while your best agents are stuck answering the same questions repeatedly.",
+      "before": [
+        "11-minute average first response time",
+        "$340 average cost per support ticket",
+        "60% of tickets are repetitive Tier-1 queries",
+        "Agents lack full context — switching between 5+ tools",
+        "Customer satisfaction declining due to slow resolution"
+      ],
+      "after": [
+        "Instant first response — under 30 seconds",
+        "$47 average cost per ticket with ArcDesk",
+        "89% of tickets auto-resolved without human touch",
+        "Full context delivered from knowledge base, CRM, and past tickets",
+        "CSAT score of 4.8/5 — customers prefer ArcDesk resolutions"
+      ]
+    },
+    "features": [
+      { "icon": "MessageCircle", "name": "Autonomous Resolution", "description": "Understands ticket intent and resolves queries using knowledge base, documentation, and past resolutions." },
+      { "icon": "Search", "name": "Multi-Source Context", "description": "Retrieves relevant information from docs, Slack, past tickets, and internal wikis to build complete resolution context." },
+      { "icon": "Settings", "name": "In-Product Actions", "description": "Executes actions directly inside your product: password resets, refunds, configuration changes, subscription updates." },
+      { "icon": "GitMerge", "name": "Smart Escalation", "description": "Escalates to human agents with full conversation context, suggested resolution, and priority score — at exactly the right moment." },
+      { "icon": "Brain", "name": "Continuous Learning", "description": "Every human resolution is fed back into the model. ArcDesk gets smarter with every ticket it can't yet handle alone." },
+      { "icon": "BarChart2", "name": "Resolution Analytics", "description": "Full dashboard of ticket volume, resolution rates, escalation patterns, and CSAT trends — updated in real time." }
+    ],
+    "steps": [
+      { "step": "01", "title": "Receive & Understand", "description": "ArcDesk ingests every incoming ticket, classifies intent, and pulls relevant context from all connected knowledge sources." },
+      { "step": "02", "title": "Resolve or Escalate", "description": "For standard queries, ArcDesk resolves autonomously and closes the ticket. For edge cases, it prepares a complete escalation package for a human agent." },
+      { "step": "03", "title": "Learn & Improve", "description": "Every resolution — human or automated — updates the model. Resolution accuracy compounds over time." }
+    ],
+    "integrations": ["Zendesk", "Intercom", "Freshdesk", "Salesforce Service Cloud", "Jira", "Notion", "Confluence", "Slack"],
+    "metrics": [
+      { "value": "89%", "label": "Auto-Resolution Rate", "description": "Percentage of tickets resolved without any human intervention" },
+      { "value": "4.8/5", "label": "CSAT Score", "description": "Average customer satisfaction score across all ArcDesk-handled tickets" },
+      { "value": "12 min", "label": "Resolution Time", "description": "Average time from ticket creation to full resolution" },
+      { "value": "$47", "label": "Cost Per Ticket", "description": "Average cost versus $340 industry average for human-handled tickets" }
+    ],
+    "faqs": [
+      { "question": "How does ArcDesk know when to escalate versus resolve autonomously?", "answer": "ArcDesk uses a confidence threshold model. When resolution confidence falls below a configurable threshold (default 85%), it escalates to a human agent with full context and a recommended response. The threshold is tunable per ticket category." },
+      { "question": "Can ArcDesk execute actions in our product, or does it just reply with instructions?", "answer": "ArcDesk can execute actions directly via API if your product exposes the relevant endpoints. Common actions include password resets, refund processing, subscription changes, and account configuration updates. We map these during onboarding." },
+      { "question": "How does ArcDesk handle sensitive topics or compliance-regulated responses?", "answer": "You define guardrails for sensitive topics during onboarding. ArcDesk will always escalate to a human for legal, financial advice, or other designated categories — and will never respond outside its configured knowledge scope." },
+      { "question": "What's the training process — how does ArcDesk learn our product?", "answer": "During deployment, ArcDesk ingests your knowledge base, documentation, past resolved tickets, and internal wikis. Training typically takes 3-5 days for a standard deployment. The model continues learning from every ticket it handles." },
+      { "question": "How does CSAT collection work with ArcDesk?", "answer": "ArcDesk sends an automated one-question CSAT survey upon ticket closure. Scores are aggregated in the analytics dashboard, and low-scoring resolutions are automatically flagged for human review." }
+    ],
+    "dashboardData": {
+      "metrics": [
+        { "value": "127", "label": "Tickets Today" },
+        { "value": "89%", "label": "Auto-Resolved" },
+        { "value": "4.8★", "label": "CSAT" },
+        { "value": "12 min", "label": "Avg Resolution" }
+      ],
+      "chartType": "bar",
+      "chartData": [
+        { "status": "Resolved", "value": 113 },
+        { "status": "Escalated", "value": 9 },
+        { "status": "Pending", "value": 5 }
+      ],
+      "feedEntries": [],
+      "messages": [
+        { "role": "customer", "text": "Hi, I can't log into my account. It's saying my password is incorrect." },
+        { "role": "agent", "text": "I can help with that right away. I've verified your account and I'm sending a secure password reset link to your registered email now." },
+        { "role": "customer", "text": "Got it, thanks! That worked." },
+        { "role": "agent", "text": "Great! Your account is now active. Is there anything else I can help you with today?" }
+      ],
+      "statusItems": [
+        { "name": "Password reset — Emily Z.", "score": "Auto", "status": "active" },
+        { "name": "Billing dispute — Marcus W.", "score": "Escalated", "status": "warning" },
+        { "name": "Integration error — Nexora", "score": "Auto", "status": "active" },
+        { "name": "Feature request — Sarah C.", "score": "Auto", "status": "active" }
+      ]
+    }
+  },
+  {
+    "slug": "arcpulse",
+    "name": "ArcPulse",
+    "color": "#D97706",
+    "tagline": "Proactive Revenue Intelligence",
+    "badge": "Retention Intelligence",
+    "description": "ArcPulse monitors client health across usage, sentiment, and engagement — predicting churn 30 days in advance and triggering proactive retention and expansion workflows before risk materializes.",
+    "problem": {
+      "title": "You're losing revenue you can't see leaving",
+      "body": "By the time a client tells you they're unhappy, it's already too late. Reactive retention strategies fail because churn signals appear weeks before cancellation — and most teams never see them until the cancellation email arrives.",
+      "before": [
+        "8% average annual churn rate with reactive monitoring",
+        "Churn discovered at cancellation — too late to intervene",
+        "Manual health checks rely on CSM instinct, not data",
+        "Expansion opportunities missed — no systematic identification",
+        "No visibility into which accounts need attention right now"
+      ],
+      "after": [
+        "3.2% average churn rate with ArcPulse proactive monitoring",
+        "Churn signals detected 30 days before any cancellation intent",
+        "Data-driven health scores updated in real time, continuously",
+        "Expansion motions triggered automatically on usage growth signals",
+        "Live portfolio dashboard showing every account's exact health status"
+      ]
+    },
+    "features": [
+      { "icon": "Activity", "name": "Real-Time Health Scoring", "description": "Continuous scoring across usage depth, support frequency, sentiment drift, and engagement patterns." },
+      { "icon": "TrendingDown", "name": "Predictive Churn Modeling", "description": "Machine learning model predicts churn risk 30 days in advance with 87% accuracy." },
+      { "icon": "TrendingUp", "name": "Expansion Detection", "description": "Identifies accounts showing growth signals and triggers expansion opportunity playbooks." },
+      { "icon": "Bell", "name": "Automated Interventions", "description": "Triggers retention plays, success check-ins, and escalation workflows at the right moment." },
+      { "icon": "PieChart", "name": "Revenue Attribution", "description": "Tracks and reports the revenue impact of every ArcPulse intervention — expansion saved and churn prevented." },
+      { "icon": "Users", "name": "CSM Augmentation", "description": "Gives customer success managers a real-time copilot — every account's health, risk, and recommended action at a glance." }
+    ],
+    "steps": [
+      { "step": "01", "title": "Connect & Monitor", "description": "ArcPulse connects to your product, CRM, support, and communication tools to build a continuous health signal across every client account." },
+      { "step": "02", "title": "Score & Predict", "description": "Health scores are updated in real time. The churn prediction model runs every 24 hours, flagging at-risk accounts 30 days before typical cancellation windows." },
+      { "step": "03", "title": "Act & Measure", "description": "Retention and expansion playbooks trigger automatically. ArcPulse tracks the outcome of every intervention and attributes revenue impact back to the action." }
+    ],
+    "integrations": ["Salesforce", "HubSpot", "Gainsight", "Mixpanel", "Amplitude", "Intercom", "Zendesk", "Slack"],
+    "metrics": [
+      { "value": "42%", "label": "Churn Reduction", "description": "Average reduction in annual churn rate after ArcPulse deployment" },
+      { "value": "2.1x", "label": "Net Revenue Retention", "description": "Average NRR improvement driven by expansion and churn prevention" },
+      { "value": "30 days", "label": "Churn Warning", "description": "Advance warning before churn intent surfaces, on average" },
+      { "value": "87%", "label": "Prediction Accuracy", "description": "Accuracy of the churn prediction model across all deployed clients" }
+    ],
+    "faqs": [
+      { "question": "How does ArcPulse calculate health scores — what signals does it use?", "answer": "ArcPulse scores six dimensions: product usage depth, feature adoption breadth, support ticket frequency and sentiment, NPS/CSAT trends, contract milestone proximity, and engagement with your success team. Each dimension is weighted per your business model during setup." },
+      { "question": "How far in advance can ArcPulse predict churn?", "answer": "The model is trained to predict churn risk 30 days before cancellation intent is typically visible. In cases where a clear behavioral pattern exists (e.g., sharp usage decline), signals can appear 45-60 days in advance." },
+      { "question": "What does a 'retention play' look like when ArcPulse triggers one?", "answer": "Depending on the risk tier, ArcPulse can trigger: an automated personalized email from the CSM, a scheduling link for an urgent check-in, an escalation alert to leadership, or a targeted ROI report sent to the client's executive sponsor." },
+      { "question": "Can ArcPulse identify expansion opportunities, not just churn risk?", "answer": "Yes — expansion detection is a core feature. ArcPulse identifies accounts showing power-user behavior, high feature utilization relative to their plan tier, or team growth signals. It triggers expansion playbooks proactively." },
+      { "question": "How does ArcPulse integrate with our existing customer success tools?", "answer": "ArcPulse has native integrations with Gainsight, Totango, ChurnZero, and Planhat for teams already running a CS platform. It can also operate as a standalone tool, pulling signals directly from your product analytics, CRM, and support systems." }
+    ],
+    "dashboardData": {
+      "metrics": [
+        { "value": "47", "label": "Active Accounts" },
+        { "value": "3.2%", "label": "Churn Rate" },
+        { "value": "2.1x", "label": "NRR" },
+        { "value": "5", "label": "At-Risk Accounts" }
+      ],
+      "chartType": "line",
+      "chartData": [
+        { "day": "Day 1", "value": 72 },
+        { "day": "Day 5", "value": 74 },
+        { "day": "Day 10", "value": 71 },
+        { "day": "Day 15", "value": 68 },
+        { "day": "Day 20", "value": 75 },
+        { "day": "Day 25", "value": 78 },
+        { "day": "Day 30", "value": 82 }
+      ],
+      "feedEntries": [
+        "⚠ Churn risk detected: Veldric Inc — usage down 41% week-over-week",
+        "✓ Retention play triggered: Nexora Corp — CSM check-in scheduled",
+        "📈 Expansion signal: SentinelAI — 3 new power users added this week",
+        "⚠ Health score drop: Pyramus Group — support tickets up 3x",
+        "✓ Intervention successful: OmniCore — churn risk resolved after executive call",
+        "📈 Expansion booked: Nexora Corp upgraded to Scale plan — +$2,400 MRR"
+      ],
+      "statusItems": [
+        { "name": "Nexora Corp", "score": "92", "status": "active" },
+        { "name": "SentinelAI", "score": "88", "status": "active" },
+        { "name": "Veldric Inc", "score": "67", "status": "warning" },
+        { "name": "OmniCore", "score": "54", "status": "warning" },
+        { "name": "Pyramus Group", "score": "34", "status": "critical" }
+      ]
+    }
+  }
+]

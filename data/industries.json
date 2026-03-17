@@ -1,0 +1,86 @@
+[
+  {
+    "id": "financial-services",
+    "name": "Financial Services",
+    "icon": "Landmark",
+    "overview": "Financial services firms face the most demanding compliance requirements in enterprise software. Every client interaction, every document, every agent decision must be fully auditable. ArcAgent's system is built for this environment — with SOC 2 Type II certification, configurable compliance guardrails, and complete audit trails on every action.\n\nFrom wealth management to insurance to investment banking, ArcAgent clients in financial services report faster client activation, lower compliance risk, and significantly reduced ops overhead.",
+    "challenges": [
+      "Regulatory compliance requirements (KYC, AML, GDPR) create manual onboarding bottlenecks",
+      "High-value client expectations demand fast, personalized response at every touchpoint",
+      "Legacy systems and siloed data prevent unified client visibility",
+      "Cost pressure to reduce headcount while maintaining service quality"
+    ],
+    "agentMapping": ["arcboard", "arcdesk", "arcpulse"],
+    "caseStudySnippet": { "client": "US Wealth Management Platform", "result": "14-day onboarding → 4 hours, $4.2M saved annually", "id": "wealth-management" }
+  },
+  {
+    "id": "saas-technology",
+    "name": "SaaS & Technology",
+    "icon": "Cpu",
+    "overview": "SaaS companies scale faster than any other vertical — and their revenue operations must keep pace. ArcAgent is deployed across the full growth stack at SaaS companies: ArcReach fills the top of funnel, ArcQual ensures only the right leads reach sales, ArcDesk handles support at scale, and ArcPulse defends net revenue retention.\n\nFor hypergrowth companies, ArcAgent replaces entire ops functions. For established players, it augments existing teams and eliminates the operational ceiling on revenue growth.",
+    "challenges": [
+      "Outbound prospecting doesn't scale linearly with headcount growth",
+      "Trial-to-paid conversion depends on fast, accurate lead qualification",
+      "Support ticket volume grows faster than revenue — compressing margins",
+      "Churn is often invisible until it's too late to prevent"
+    ],
+    "agentMapping": ["arcreach", "arcqual", "arcdesk", "arcpulse"],
+    "caseStudySnippet": { "client": "Enterprise B2B CRM Company", "result": "89% ticket auto-resolution, CSAT 4.8 stars", "id": "saas-crm" }
+  },
+  {
+    "id": "healthcare-insurance",
+    "name": "Healthcare & Insurance",
+    "icon": "Heart",
+    "overview": "Healthcare and insurance firms operate in some of the most tightly regulated environments in enterprise software. HIPAA compliance, claims processing accuracy, and patient privacy are non-negotiable. ArcAgent's agents are designed for zero-tolerance compliance environments.\n\nArcBoard handles patient and policyholder onboarding with full data governance controls. ArcDesk manages inbound queries within HIPAA-safe response boundaries. ArcPulse monitors policyholder health to prevent lapse and identify cross-sell opportunities.",
+    "challenges": [
+      "HIPAA and state insurance regulations create onboarding compliance complexity",
+      "Claims processing accuracy requirements leave no room for manual error",
+      "Patient and policyholder communication must be timely, accurate, and empathetic",
+      "Lapse prevention requires proactive monitoring across thousands of accounts"
+    ],
+    "agentMapping": ["arcboard", "arcdesk", "arcpulse"],
+    "caseStudySnippet": { "client": "Mid-Market Insurtech Platform", "result": "42% churn reduction, $1.8M ARR saved in Q1", "id": "insurtech" }
+  },
+  {
+    "id": "legal-compliance",
+    "name": "Legal & Compliance",
+    "icon": "Scale",
+    "overview": "Law firms and compliance-focused businesses need automation that respects the highest standards of data security, confidentiality, and audit traceability. ArcAgent's system is deployed in legal environments with zero-retention data options and full end-to-end encryption.\n\nArcBoard streamlines matter onboarding — intake, conflict checks, engagement letter management, and document collection. ArcDesk handles routine client inquiries and status updates, freeing fee-earners to focus on billable work.",
+    "challenges": [
+      "Matter onboarding involves complex document intake and conflict checking workflows",
+      "Client communication standards require fast response with high accuracy",
+      "Confidentiality requirements demand strict data governance and access controls",
+      "Billing and collection workflows are manual and time-consuming"
+    ],
+    "agentMapping": ["arcboard", "arcdesk"],
+    "caseStudySnippet": { "client": "Summit Legal Group", "result": "Matter onboarding time reduced by 68%, client NPS up 22 points", "id": "legal-compliance" }
+  },
+  {
+    "id": "ecommerce-retail",
+    "name": "E-Commerce & Retail",
+    "icon": "ShoppingBag",
+    "overview": "E-commerce and retail brands live and die by response speed and customer experience. ArcAgent's suite addresses the full post-acquisition lifecycle — from support resolution to churn prevention to expansion through loyalty and repeat purchase.\n\nArcDesk handles the high volume of order, shipping, and return queries that define e-commerce support. ArcReach re-engages lapsed customers with personalized outreach. ArcPulse monitors customer lifetime value signals and triggers retention plays before valuable customers churn.",
+    "challenges": [
+      "Support ticket volume spikes during campaigns and peak seasons are unmanageable manually",
+      "Cart abandonment and lapsed customer recovery requires personalized outreach at scale",
+      "Return and refund processing creates cost pressure without automation",
+      "Loyalty and repeat purchase signals go unmonitored without systematic analytics"
+    ],
+    "agentMapping": ["arcreach", "arcdesk", "arcpulse"],
+    "caseStudySnippet": { "client": "DTC Fashion Brand", "result": "Support costs reduced 71%, repeat purchase rate up 34%", "id": "ecommerce" }
+  },
+  {
+    "id": "professional-services",
+    "name": "Professional Services",
+    "icon": "Briefcase",
+    "overview": "Consulting, advisory, and professional services firms generate revenue through relationships — and every hour spent on operational administration is an hour not spent building client value. ArcAgent automates the administrative layer entirely.\n\nArcReach drives consistent, personalized business development at scale. ArcQual ensures the right opportunities get prioritized. ArcBoard handles SOW and engagement onboarding. ArcPulse monitors client health across every active engagement.",
+    "challenges": [
+      "Business development is dependent on partner relationships — not scalable without automation",
+      "Proposal and SOW workflows are manual and inconsistent across the firm",
+      "Client health monitoring across dozens of active engagements lacks systematic oversight",
+      "Onboarding new clients and scoping new work is slow and resource-intensive"
+    ],
+    "agentMapping": ["arcreach", "arcqual", "arcboard", "arcpulse"],
+    "caseStudySnippet": { "client": "Global Management Consulting Firm", "result": "3.2x pipeline in 60 days, time-to-meeting cut from 45 to 18 days", "id": "consulting-firm" }
+  }
+]

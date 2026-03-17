@@ -1,0 +1,74 @@
+[
+  {
+    "id": "wealth-management",
+    "industry": "Financial Services",
+    "tag": "Financial Services",
+    "client": "US Wealth Management Platform",
+    "headline": "14-Day Onboarding Compressed to 4 Hours — $4.2M Annual Savings",
+    "brief": "A leading US wealth management platform eliminated their manual KYC onboarding bottleneck with ArcBoard, transforming client activation from a two-week ordeal into a four-hour automated workflow.",
+    "challenge": "Manual document collection and compliance verification created a 14-day bottleneck for every new client onboarding. Operations teams spent 80% of their time on repetitive paperwork rather than relationship building. New clients experienced frustration and drop-off before they'd even started investing.",
+    "solution": "ArcBoard was deployed to automate the full KYC onboarding flow, including document collection, identity verification, and compliance checks with real-time progress tracking for both the client and the ops team.",
+    "results": [
+      { "metric": "73%", "label": "Reduction in onboarding time" },
+      { "metric": "4 hrs", "label": "Time to full activation" },
+      { "metric": "$4.2M", "label": "Annual operational savings" },
+      { "metric": "98%", "label": "Document accuracy rate" }
+    ],
+    "quote": { "text": "Client onboarding used to take two weeks and three ops team members. With ArcBoard, new clients are fully activated in under four hours. The compliance accuracy alone justifies the entire investment.", "author": "Head of Operations", "company": "US Wealth Management Platform" },
+    "agentsUsed": ["arcboard"]
+  },
+  {
+    "id": "saas-crm",
+    "industry": "SaaS & Technology",
+    "tag": "SaaS",
+    "client": "Enterprise B2B CRM Software Company",
+    "headline": "89% Ticket Auto-Resolution — CSAT Jumped to 4.8 Stars",
+    "brief": "A high-growth B2B CRM company was drowning in Tier-1 support tickets. ArcDesk gave their team back 60% of their capacity while improving customer satisfaction simultaneously.",
+    "challenge": "Tier-1 support ticket volume was consuming 60% of the support team's capacity. Response times averaged 11 minutes and customer satisfaction was declining. Senior agents were stuck answering password reset requests instead of solving complex customer problems.",
+    "solution": "ArcDesk was deployed to handle frontline support autonomously, with full context retrieval from the knowledge base and the ability to execute in-product actions like password resets and configuration changes.",
+    "results": [
+      { "metric": "89%", "label": "Tickets auto-resolved" },
+      { "metric": "4.8★", "label": "CSAT score achieved" },
+      { "metric": "12 min", "label": "Average resolution time" },
+      { "metric": "60%", "label": "Team capacity freed up" }
+    ],
+    "quote": { "text": "ArcDesk handles 89% of our tickets autonomously. Our team went from firefighting to strategy. CSAT went up, costs went down — it's the most impactful thing we've done in two years.", "author": "VP Customer Experience", "company": "Enterprise CRM Company" },
+    "agentsUsed": ["arcdesk"]
+  },
+  {
+    "id": "consulting-firm",
+    "industry": "Professional Services",
+    "tag": "Professional Services",
+    "client": "Global Management Consulting Firm",
+    "headline": "3.2x Pipeline Growth in 60 Days — Time-to-Meeting Down 60%",
+    "brief": "A global management consulting firm replaced inconsistent manual prospecting with ArcReach and ArcQual, achieving dramatic pipeline acceleration while lowering acquisition costs by 67%.",
+    "challenge": "Outbound prospecting was manual and inconsistent across partners. Pipeline generation varied wildly between offices, and the average time from first contact to meeting was 45 days. There was no system — just individual partner effort.",
+    "solution": "ArcReach ran personalized multi-channel outbound sequences at scale with CRM-native reporting, while ArcQual scored and routed inbound responses to the right partner based on deal size and vertical fit.",
+    "results": [
+      { "metric": "3.2x", "label": "Qualified pipeline growth" },
+      { "metric": "67%", "label": "Lower customer acquisition cost" },
+      { "metric": "18 days", "label": "Average time to meeting" },
+      { "metric": "60 days", "label": "Time to full results" }
+    ],
+    "quote": { "text": "ArcReach's personalization quality is unlike anything we've tried. Our prospects reply asking if a human wrote it. The pipeline impact was visible within the first two weeks.", "author": "Managing Partner", "company": "Global Management Consulting Firm" },
+    "agentsUsed": ["arcreach", "arcqual"]
+  },
+  {
+    "id": "insurtech",
+    "industry": "Healthcare & Insurance",
+    "tag": "Insurance",
+    "client": "Mid-Market Insurtech Platform",
+    "headline": "42% Churn Reduction — $1.8M Revenue Saved in First Quarter",
+    "brief": "An insurtech platform using ArcPulse detected and prevented churn in key accounts that traditional CSM processes would have missed entirely — saving over $1.8M in annual recurring revenue in the first quarter alone.",
+    "challenge": "The customer success team was managing 200+ accounts with a team of five. Churn was discovered at cancellation — always reactive, never proactive. There was no systematic way to identify which accounts needed attention before it was too late.",
+    "solution": "ArcPulse was deployed across the full portfolio, integrating with the product's usage analytics, support system, and CRM. The model began generating health scores and churn predictions within two weeks of deployment.",
+    "results": [
+      { "metric": "42%", "label": "Reduction in annual churn" },
+      { "metric": "$1.8M", "label": "ARR saved in Q1" },
+      { "metric": "30 days", "label": "Early warning lead time" },
+      { "metric": "2.1x", "label": "Net Revenue Retention" }
+    ],
+    "quote": { "text": "ArcPulse caught a major churn risk 30 days before the client was going to cancel. The retention play it triggered saved a $240K account. The ROI was immediate.", "author": "Chief Customer Officer", "company": "Mid-Market Insurtech Platform" },
+    "agentsUsed": ["arcpulse"]
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "navbar": [
+    { "label": "Products", "href": "/products", "hasMegaMenu": true },
+    { "label": "Industries", "href": "/industries" },
+    { "label": "Case Studies", "href": "/case-studies" },
+    { "label": "Pricing", "href": "/pricing" }
+  ],
+  "agents": [
+    { "slug": "arcreach", "name": "ArcReach", "color": "#3B82F6", "oneliner": "Autonomous outbound sales & prospecting" },
+    { "slug": "arcqual", "name": "ArcQual", "color": "#0891B2", "oneliner": "Inbound lead scoring & routing" },
+    { "slug": "arcboard", "name": "ArcBoard", "color": "#059669", "oneliner": "Client onboarding automation" },
+    { "slug": "arcdesk", "name": "ArcDesk", "color": "#7C3AED", "oneliner": "AI-native support resolution" },
+    { "slug": "arcpulse", "name": "ArcPulse", "color": "#D97706", "oneliner": "Revenue health & churn prevention" }
+  ],
+  "footer": {
+    "products": [
+      { "label": "Overview", "href": "/products" },
+      { "label": "ArcReach", "href": "/products/arcreach" },
+      { "label": "ArcQual", "href": "/products/arcqual" },
+      { "label": "ArcBoard", "href": "/products/arcboard" },
+      { "label": "ArcDesk", "href": "/products/arcdesk" },
+      { "label": "ArcPulse", "href": "/products/arcpulse" }
+    ],
+    "company": [
+      { "label": "About", "href": "/about" },
+      { "label": "Careers", "href": "/careers" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Security", "href": "/security" }
+    ],
+    "resources": [
+      { "label": "Case Studies", "href": "/case-studies" },
+      { "label": "Industries", "href": "/industries" },
+      { "label": "Pricing", "href": "/pricing" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "/privacy-policy" },
+      { "label": "Terms of Service", "href": "/terms-of-service" }
+    ]
+  },
+  "mobile": [
+    { "label": "Products", "href": "/products", "hasSubItems": true },
+    { "label": "Industries", "href": "/industries" },
+    { "label": "Case Studies", "href": "/case-studies" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "About", "href": "/about" }
+  ]
+}
