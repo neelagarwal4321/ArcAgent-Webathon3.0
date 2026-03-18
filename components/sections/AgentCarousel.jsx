@@ -17,7 +17,7 @@ export default function AgentCarousel({ agents }) {
   return (
     <section className="bg-bg-base page-section">
       <div className="page-container">
-        <ScrollReveal className="mb-12">
+        <ScrollReveal className="mb-14">
           <SectionHeader overline="PRODUCTS" heading="The ArcAgent Suite" centered dark />
         </ScrollReveal>
 
@@ -70,7 +70,7 @@ export default function AgentCarousel({ agents }) {
           </AnimatePresence>
 
           {/* Controls */}
-          <div className="flex items-center justify-center gap-4 mt-7">
+          <div className="flex items-center justify-center gap-4 mt-8">
             <button onClick={() => setCurrent((c) => (c - 1 + agents.length) % agents.length)} className="w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-text-on-dark-muted hover:text-white hover:border-white/30 transition-colors">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 3L5 7l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
             </button>

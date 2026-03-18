@@ -18,7 +18,7 @@ export default function LifecyclePipeline({ dark = true }) {
             heading="Agents That Get Smarter Every Day"
             subtext="Every ArcAgent deployment follows a four-stage intelligence pipeline. Your agents don't just execute — they observe, learn, and optimize autonomously."
             centered dark
-            className="mb-12"
+            className="mb-14"
           />
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
@@ -38,7 +38,7 @@ export default function LifecyclePipeline({ dark = true }) {
             </ScrollReveal>
           ))}
         </div>
-        <ScrollReveal className="mt-8 text-center">
+        <ScrollReveal className="mt-10 text-center">
           <p className="font-figtree font-medium text-sm text-primary">Average 34% performance improvement in first 90 days</p>
         </ScrollReveal>
       </div>

@@ -25,14 +25,14 @@ export default function TestimonialsMarquee({ testimonials }) {
 
   return (
     <section className="bg-bg-base page-section overflow-hidden">
-      <div className="page-container mb-12">
+      <div className="page-container mb-14">
         <ScrollReveal>
           <SectionHeader overline="SOCIAL PROOF" heading="Trusted by Revenue Leaders Worldwide" centered dark />
         </ScrollReveal>
       </div>
 
       {/* Row 1 — scrolls left */}
-      <div className="flex mb-4 group">
+      <div className="flex mb-5 group">
         <div className="flex animate-marquee-left group-hover:[animation-play-state:paused]">
           {[...row1, ...row1].map((t, i) => <TestimonialCard key={i} t={t} />)}
         </div>

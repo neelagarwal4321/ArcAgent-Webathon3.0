@@ -80,7 +80,7 @@ export default function TermsOfService() {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="page-section" style={{ background: '#0A0F2C' }}>
+      <section className="pt-16 md:pt-20 lg:pt-28 pb-0" style={{ background: '#0A0F2C' }}>
         <div className="page-container text-center">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto">
@@ -97,7 +97,7 @@ export default function TermsOfService() {
       </section>
 
       {/* ── Content ── */}
-      <section className="page-section" style={{ background: '#0A0F2C' }}>
+      <section className="pt-12 md:pt-14 pb-16 md:pb-20 lg:pb-28" style={{ background: '#0A0F2C' }}>
         <div className="page-container">
           <div className="max-w-4xl mx-auto">
           {/* Tab bar */}

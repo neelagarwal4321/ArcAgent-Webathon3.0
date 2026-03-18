@@ -113,7 +113,7 @@ export default function PricingPage({ tiers }) {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="relative page-section overflow-hidden" style={{ background: '#0A0F2C' }}>
+      <section className="relative pt-16 md:pt-20 lg:pt-28 pb-10 md:pb-12 overflow-hidden" style={{ background: '#0A0F2C' }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -173,7 +173,7 @@ export default function PricingPage({ tiers }) {
       </section>
 
       {/* ── Pricing Cards ── */}
-      <section className="page-section" style={{ background: '#0A0F2C' }}>
+      <section className="pt-0 pb-16 md:pb-20 lg:pb-28" style={{ background: '#0A0F2C' }}>
         <div className="page-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tiers.map((tier, i) => (
@@ -307,7 +307,7 @@ export default function PricingPage({ tiers }) {
       <section className="page-section" style={{ background: '#0E1435' }}>
         <div className="page-container">
           <ScrollReveal>
-            <div className="text-center mb-14">
+            <div className="text-center mb-12">
               <span className="font-mono text-[11px] font-medium tracking-widest uppercase text-[#2539E7] mb-3 block">
                 Compare Plans
               </span>

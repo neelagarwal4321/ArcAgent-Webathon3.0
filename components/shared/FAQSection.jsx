@@ -10,7 +10,7 @@ export default function FAQSection({ faqs = [], title = 'Frequently Asked Questi
           <ScrollReveal>
             <SectionHeader heading={title} centered dark={dark} className="mb-10" />
           </ScrollReveal>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             {faqs.map((faq, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <AccordionItem title={faq.question} dark={dark}>

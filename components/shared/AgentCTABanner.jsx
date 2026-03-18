@@ -3,7 +3,7 @@ import { useDemoModal } from '@/context/DemoModalContext';
 export default function AgentCTABanner({ agentName, accentColor }) {
   const { openModal } = useDemoModal();
   return (
-    <section className="page-section text-center" style={{ background: `linear-gradient(135deg, ${accentColor}15 0%, ${accentColor}05 100%)`, borderTop: `1px solid ${accentColor}20` }}>
+    <section className="page-section-sm text-center" style={{ background: `linear-gradient(135deg, ${accentColor}15 0%, ${accentColor}05 100%)`, borderTop: `1px solid ${accentColor}20` }}>
       <div className="page-container">
         <div className="max-w-2xl mx-auto">
         <h2 className="font-syne font-bold text-3xl md:text-4xl text-text-on-dark mb-4">

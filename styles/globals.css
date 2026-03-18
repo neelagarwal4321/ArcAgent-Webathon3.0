@@ -129,9 +129,10 @@ img, video { max-width: 100%; display: block; }
    LAYOUT UTILITIES (SPEC v1.0)
    ───────────────────────────────────────────────────────────── */
 @layer components {
-  .page-section { @apply py-16 md:py-20 lg:py-[120px]; }
-  .page-container { @apply max-w-content mx-auto px-5 md:px-10 lg:px-20; }
-  .page-container-narrow { @apply max-w-[1200px] mx-auto px-5 md:px-10 lg:px-20; }
+  .page-section    { @apply py-16 md:py-20 lg:py-28; }
+  .page-section-sm { @apply py-10 md:py-12 lg:py-14; }
+  .page-container        { @apply max-w-content mx-auto px-6 md:px-10 lg:px-16; }
+  .page-container-narrow { @apply max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16; }
 }
 
 /* ══════════════════════════════════════════════
@@ -162,12 +163,12 @@ img, video { max-width: 100%; display: block; }
    BLOG PROSE STYLES
    ══════════════════════════════════════════════ */
 
-.prose-arc h2 { font-family:'Syne',sans-serif; font-size:1.75rem; font-weight:700; color:var(--text-primary); margin:2rem 0 1rem; }
-.prose-arc h3 { font-family:'Syne',sans-serif; font-size:1.35rem; font-weight:600; color:var(--text-primary); margin:1.5rem 0 .75rem; }
-.prose-arc p  { color:var(--text-secondary); line-height:1.7; margin-bottom:1.25rem; }
-.prose-arc ul,.prose-arc ol { color:var(--text-secondary); padding-left:1.5rem; margin-bottom:1.25rem; }
-.prose-arc li { margin-bottom:.5rem; line-height:1.6; }
-.prose-arc blockquote { border-left:3px solid var(--primary); padding-left:1.25rem; color:var(--text-muted); font-style:italic; margin:1.5rem 0; }
+.prose-arc h2 { font-family:'Syne',sans-serif; font-size:1.75rem; font-weight:700; color:var(--text-primary); margin:3rem 0 1.25rem; }
+.prose-arc h3 { font-family:'Syne',sans-serif; font-size:1.35rem; font-weight:600; color:var(--text-primary); margin:2.5rem 0 1rem; }
+.prose-arc p  { color:var(--text-secondary); line-height:1.8; margin-bottom:1.5rem; }
+.prose-arc ul,.prose-arc ol { color:var(--text-secondary); padding-left:1.75rem; margin-bottom:1.5rem; }
+.prose-arc li { margin-bottom:.6rem; line-height:1.75; }
+.prose-arc blockquote { border-left:3px solid var(--primary); padding-left:1.5rem; color:var(--text-muted); font-style:italic; margin:2rem 0; }
 .prose-arc code { font-family:'JetBrains Mono',monospace; background:var(--surface-3); color:var(--text-primary); padding:.15em .4em; border-radius:4px; font-size:.875em; }
 .prose-arc pre  { background:var(--bg-base); color:#fff; padding:1.25rem; border-radius:8px; overflow-x:auto; margin-bottom:1.25rem; }
 .prose-arc pre code { background:none; color:inherit; padding:0; }

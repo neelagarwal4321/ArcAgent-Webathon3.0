@@ -129,7 +129,7 @@ export default function Contact() {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="page-section bg-[#0A0F2C]">
+      <section className="pt-16 md:pt-20 lg:pt-28 pb-0 bg-[#0A0F2C]">
         <div className="page-container">
           <ScrollReveal>
             <SectionHeader
@@ -144,7 +144,7 @@ export default function Contact() {
       </section>
 
       {/* ── 2-col layout ── */}
-      <section className="page-section bg-[#0A0F2C]">
+      <section className="pt-12 md:pt-14 pb-16 md:pb-20 lg:pb-28 bg-[#0A0F2C]">
         <div className="page-container">
           <div className="grid lg:grid-cols-[1fr_420px] gap-10 items-start">
 

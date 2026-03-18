@@ -5,7 +5,7 @@ export default function CTABanner({ headline = 'Ready to automate your revenue l
   const { openModal } = useDemoModal();
 
   return (
-    <section className="bg-primary page-section border-y border-white/10">
+    <section className="bg-primary page-section-sm border-y border-white/10">
       <div className="page-container">
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">

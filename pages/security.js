@@ -147,7 +147,7 @@ export default function Security() {
                 overline="Data Protection"
                 heading="How We Protect Your Data"
                 dark
-                className="mb-8"
+                className="mb-10"
               />
               <div className="flex flex-col gap-4">
                 {PRACTICES.map((p, i) => (
@@ -229,7 +229,7 @@ export default function Security() {
       />
 
       {/* ── CTA ── */}
-      <section className="page-section" style={{ background: '#0A0F2C', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+      <section className="py-14 md:py-16 lg:py-20" style={{ background: '#0A0F2C', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="page-container text-center">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto">

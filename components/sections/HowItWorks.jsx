@@ -12,7 +12,7 @@ export default function HowItWorks() {
   return (
     <section className="bg-bg-alt page-section">
       <div className="page-container">
-        <ScrollReveal className="mb-12">
+        <ScrollReveal className="mb-14">
           <SectionHeader overline="PROCESS" heading="From Contract to Deployment in 14 Days" centered dark />
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">

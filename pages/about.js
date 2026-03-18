@@ -109,7 +109,7 @@ export default function About({ team }) {
                 overline="Our Story"
                 heading="Built by operators who lived the problem."
                 dark
-                className="mb-8"
+                className="mb-10"
               />
               <div className="space-y-5">
                 <p className="font-figtree text-base text-[#C8CCE0] leading-relaxed">
@@ -211,7 +211,7 @@ export default function About({ team }) {
       </section>
 
       {/* ── 4. Stats Bar ── */}
-      <section className="page-section bg-[#0E1435] border-y border-white/5">
+      <section className="py-14 md:py-16 bg-[#0E1435] border-y border-white/5">
         <div className="page-container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {STATS.map((stat, i) => (
@@ -341,7 +341,7 @@ export default function About({ team }) {
       </section>
 
       {/* ── 8. Partners & Investors ── */}
-      <section className="page-section bg-[#0E1435] border-y border-white/5">
+      <section className="py-14 md:py-16 bg-[#0E1435] border-y border-white/5">
         <div className="page-container">
           <ScrollReveal>
             <p className="font-mono text-[11px] font-medium tracking-widest uppercase text-[#8088A8] text-center mb-8">Backed by & partnered with</p>

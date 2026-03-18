@@ -35,7 +35,7 @@ export default function BeforeAfterSlider() {
   return (
     <section className="bg-bg-base page-section">
       <div className="page-container">
-        <ScrollReveal className="mb-12">
+        <ScrollReveal className="mb-14">
           <SectionHeader overline="THE DIFFERENCE" heading="Before and After ArcAgent" centered dark />
         </ScrollReveal>
 
@@ -89,7 +89,7 @@ export default function BeforeAfterSlider() {
             { title: 'Without ArcAgent', items: BEFORE, bg: 'rgba(239,68,68,0.04)', titleColor: '#EF4444' },
             { title: 'With ArcAgent', items: AFTER, bg: 'rgba(5,150,105,0.04)', titleColor: '#059669' },
           ].map((side) => (
-            <div key={side.title} className="rounded-card p-6 shadow-card" style={{ background: side.bg }}>
+            <div key={side.title} className="rounded-card p-7 shadow-card" style={{ background: side.bg }}>
               <p className="font-figtree font-semibold text-base mb-4" style={{ color: side.titleColor }}>{side.title}</p>
               <div className="space-y-2.5">
                 {side.items.map((item, i) => (

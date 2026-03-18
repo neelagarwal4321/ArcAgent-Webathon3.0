@@ -14,10 +14,10 @@ export default function CTASection() {
       <div className="relative z-10 page-container">
         <div className="max-w-2xl mx-auto">
           <ScrollReveal>
-            <h2 className="font-syne font-bold text-3xl md:text-5xl -tracking-[0.02em] text-white mb-5 leading-[1.08]">
+            <h2 className="font-syne font-bold text-3xl md:text-5xl -tracking-[0.02em] text-white mb-6 leading-[1.08]">
               Ready to Deploy Your Agent Workforce?
             </h2>
-            <p className="font-figtree text-lg text-white/75 mb-10 max-w-xl mx-auto">
+            <p className="font-figtree text-lg text-white/75 mb-12 max-w-xl mx-auto">
               Join 200+ enterprise teams automating their revenue operations with ArcAgent. Live in 14 days, guaranteed.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

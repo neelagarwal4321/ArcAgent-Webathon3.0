@@ -159,8 +159,8 @@ export default function BlogPost({ post, relatedPosts }) {
           font-size: 1.5rem;
           line-height: 1.25;
           color: #ffffff;
-          margin-top: 2.5rem;
-          margin-bottom: 1rem;
+          margin-top: 3rem;
+          margin-bottom: 1.25rem;
           letter-spacing: -0.01em;
         }
         .blog-prose h3 {
@@ -168,27 +168,27 @@ export default function BlogPost({ post, relatedPosts }) {
           font-weight: 600;
           font-size: 1.2rem;
           color: #ffffff;
-          margin-top: 2rem;
-          margin-bottom: 0.75rem;
+          margin-top: 2.5rem;
+          margin-bottom: 1rem;
         }
         .blog-prose p {
           font-family: var(--font-figtree), sans-serif;
           font-size: 1.0625rem;
-          line-height: 1.75;
+          line-height: 1.8;
           color: #C8CCE0;
-          margin-bottom: 1.4rem;
+          margin-bottom: 1.5rem;
         }
         .blog-prose ul,
         .blog-prose ol {
-          padding-left: 1.5rem;
-          margin-bottom: 1.4rem;
+          padding-left: 1.75rem;
+          margin-bottom: 1.5rem;
           color: #C8CCE0;
           font-family: var(--font-figtree), sans-serif;
           font-size: 1.0625rem;
-          line-height: 1.75;
+          line-height: 1.8;
         }
         .blog-prose li {
-          margin-bottom: 0.4rem;
+          margin-bottom: 0.5rem;
         }
         .blog-prose strong {
           color: #ffffff;

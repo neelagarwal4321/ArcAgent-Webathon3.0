@@ -12,17 +12,17 @@ export default function CaseStudiesPreview({ caseStudies }) {
   return (
     <section className="bg-bg-alt page-section">
       <div className="page-container">
-        <ScrollReveal className="mb-12">
+        <ScrollReveal className="mb-14">
           <SectionHeader overline="PROOF" heading="Results That Speak for Themselves" centered dark />
         </ScrollReveal>
-        <div className="flex flex-col gap-4 mb-10">
+        <div className="flex flex-col gap-4 mb-12">
           {items.map((cs, i) => (
             <ScrollReveal key={cs.id} delay={i * 0.06}>
               <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] overflow-hidden"
                 style={{ borderLeft: `4px solid ${AGENT_COLORS[cs.agentsUsed[0]] || '#2539E7'}` }}>
                 <button
                   onClick={() => setOpenId(openId === cs.id ? null : cs.id)}
-                  className="w-full flex items-start justify-between p-6 text-left gap-4"
+                  className="w-full flex items-start justify-between p-7 text-left gap-4"
                 >
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
@@ -41,8 +41,8 @@ export default function CaseStudiesPreview({ caseStudies }) {
                     <motion.div
                       initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }} className="overflow-hidden">
-                      <div className="px-6 pb-6 bg-surface-2 border-t border-[rgba(10,15,44,0.06)]">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5">
+                      <div className="px-7 pb-7 bg-surface-2 border-t border-[rgba(10,15,44,0.06)]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
                           <div>
                             <p className="font-figtree font-semibold text-sm text-text-primary mb-2">The Challenge</p>
                             <p className="font-figtree text-sm text-text-secondary">{cs.challenge}</p>
