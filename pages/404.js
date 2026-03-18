@@ -50,7 +50,7 @@ export default function NotFound() {
       </Head>
 
       <div
-        className="min-h-screen flex flex-col items-center justify-center px-6 text-center"
+        className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
         style={{ background: '#0A0F2C' }}
       >
         {/* Ambient glow */}
@@ -59,7 +59,8 @@ export default function NotFound() {
           style={{ background: 'radial-gradient(ellipse, rgba(37,57,231,0.12) 0%, transparent 70%)' }}
         />
 
-        <div className="relative z-10 max-w-2xl w-full mx-auto">
+        <div className="page-container w-full">
+          <div className="relative z-10 max-w-2xl w-full mx-auto">
           {/* Three.js 404 Visual */}
           <div className="mb-6">
             <GlitchText404 />
@@ -116,6 +117,7 @@ export default function NotFound() {
                 {link.label}
               </Link>
             ))}
+          </div>
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import navData from '../../data/navigation.json';
-import { SITE } from '../../lib/constants';
+import navData from '@/data/navigation.json';
+import { SITE } from '@/lib/constants';
 
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#070F1F', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-      <div className="max-w-content mx-auto px-6 pt-16 pb-6">
+      <div className="page-container-narrow py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 pb-12 border-b border-white/6">
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">

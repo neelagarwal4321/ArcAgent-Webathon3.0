@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useDemoModal } from '../../context/DemoModalContext';
-import navData from '../../data/navigation.json';
+import { useDemoModal } from '@/context/DemoModalContext';
+import navData from '@/data/navigation.json';
 
 export default function MobileNav({ open, onClose }) {
   const { openModal } = useDemoModal();

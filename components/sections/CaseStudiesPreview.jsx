@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionHeader from '../ui/SectionHeader';
 import ScrollReveal from '../shared/ScrollReveal';
-import { AGENT_COLORS } from '../../lib/constants';
+import { AGENT_COLORS } from '@/lib/constants';
 
 export default function CaseStudiesPreview({ caseStudies }) {
   const [openId, setOpenId] = useState(null);
   const items = caseStudies.slice(0, 3);
 
   return (
-    <section className="bg-bg-alt py-section-md px-6">
-      <div className="max-w-content mx-auto">
+    <section className="bg-bg-alt page-section">
+      <div className="page-container">
         <ScrollReveal className="mb-12">
           <SectionHeader overline="PROOF" heading="Results That Speak for Themselves" centered dark />
         </ScrollReveal>

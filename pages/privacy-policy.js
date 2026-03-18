@@ -12,8 +12,8 @@ const CONTENT = {
     heading: 'Privacy Policy Overview',
     body: [
       'ArcAgent, Inc. ("ArcAgent," "we," "us," or "our") is committed to protecting the privacy of our customers, prospective customers, and visitors to our website. This Privacy Policy describes how we collect, use, disclose, and safeguard your personal information when you use our website, platform, and services (collectively, the "Services").',
-      'This policy applies to all information collected through our Services, including our website at arcagent.io, our enterprise AI platform, and any related applications, tools, or communications. It does not apply to the data you process on behalf of your own customers through our platform — that is governed by your Data Processing Agreement with ArcAgent.',
-      'We are committed to compliance with the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable data protection laws. If you have questions about how we handle your personal data, please contact our Data Protection Officer at privacy@arcagent.io.',
+      'This policy applies to all information collected through our Services, including our website at arcagent.ai, our enterprise AI platform, and any related applications, tools, or communications. It does not apply to the data you process on behalf of your own customers through our platform — that is governed by your Data Processing Agreement with ArcAgent.',
+      'We are committed to compliance with the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable data protection laws. If you have questions about how we handle your personal data, please contact our Data Protection Officer at privacy@arcagent.ai.',
       'By using our Services, you agree to the collection and use of information in accordance with this policy. We may update this policy periodically. The "Last Updated" date at the top of this page reflects when material changes were last made. Continued use of our Services after changes constitutes acceptance of the updated policy.',
     ],
   },
@@ -32,7 +32,7 @@ const CONTENT = {
     body: [
       'We use the information we collect to provide, operate, and improve our Services. This includes processing transactions, managing your account, responding to your inquiries, sending you service-related communications, and providing customer support.',
       'We use aggregated and anonymized data to analyze usage patterns, improve our platform features, train our AI models (on your data only with your explicit consent), and develop new services. Individual customers are never identifiable in this aggregated analysis.',
-      'With your consent or based on our legitimate interests, we may use your contact information to send marketing communications about our products, industry insights, and company news. You can opt out of marketing emails at any time by clicking "Unsubscribe" in any email or contacting us at privacy@arcagent.io.',
+      'With your consent or based on our legitimate interests, we may use your contact information to send marketing communications about our products, industry insights, and company news. You can opt out of marketing emails at any time by clicking "Unsubscribe" in any email or contacting us at privacy@arcagent.ai.',
       'We may use your information to detect, prevent, and respond to fraud, abuse, security incidents, and other potentially harmful activities. We also use it to comply with legal obligations, enforce our terms of service, and protect the rights and safety of ArcAgent, our customers, and the public.',
       'We do not sell your personal data to third parties. We do not use your data to serve you advertising from other companies. Our business model is based on providing value through our Services, not monetizing your information.',
     ],
@@ -42,7 +42,7 @@ const CONTENT = {
     body: [
       'Depending on your location, you may have certain rights regarding your personal data. Under the GDPR, EU/EEA residents have the right to access, rectify, erase, restrict processing of, and port their personal data. You also have the right to object to processing and to withdraw consent at any time where processing is based on consent.',
       'California residents have rights under the CCPA, including the right to know what personal information is collected about them, the right to know whether personal information is sold or disclosed and to whom, the right to opt out of the sale of personal information (note: we do not sell personal information), and the right to equal service and price whether or not they exercise their privacy rights.',
-      'To exercise any of these rights, please submit a request to privacy@arcagent.io. We will respond to verified requests within 30 days (or 45 days for complex requests, with notice). We may need to verify your identity before processing your request. We will not discriminate against you for exercising your privacy rights.',
+      'To exercise any of these rights, please submit a request to privacy@arcagent.ai. We will respond to verified requests within 30 days (or 45 days for complex requests, with notice). We may need to verify your identity before processing your request. We will not discriminate against you for exercising your privacy rights.',
       'If you are located in the EU/EEA and believe we have not handled your personal data in compliance with applicable law, you have the right to lodge a complaint with your local supervisory authority. ArcAgent\'s lead supervisory authority for EU matters is the Irish Data Protection Commission.',
     ],
   },
@@ -60,9 +60,9 @@ const CONTENT = {
     heading: 'How to Reach Us',
     body: [
       'If you have questions, concerns, or requests related to this Privacy Policy or our handling of your personal data, please contact our Data Protection Officer. We are committed to resolving privacy concerns promptly and transparently.',
-      'You can reach us by email at privacy@arcagent.io. For formal data subject requests (access, erasure, portability, etc.), please use this same address and include your name, the email address associated with your account, and a clear description of your request. We will respond within 30 days.',
+      'You can reach us by email at privacy@arcagent.ai. For formal data subject requests (access, erasure, portability, etc.), please use this same address and include your name, the email address associated with your account, and a clear description of your request. We will respond within 30 days.',
       'Our mailing address is: ArcAgent, Inc., Attn: Data Protection Officer, 1 Market Street, Suite 300, San Francisco, CA 94105, United States. For EU/EEA inquiries, our EU representative is ArcAgent Ireland Ltd., 2 Grand Canal Square, Dublin 2, D02 A342, Ireland.',
-      'For security vulnerability disclosures, please use security@arcagent.io rather than our privacy contact. For general product or sales inquiries, please visit our contact page at arcagent.io/contact.',
+      'For security vulnerability disclosures, please use security@arcagent.ai rather than our privacy contact. For general product or sales inquiries, please visit our contact page at arcagent.ai/contact.',
     ],
   },
 };
@@ -79,9 +79,10 @@ export default function PrivacyPolicy() {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="pt-32 pb-16" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container text-center">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <SectionHeader
               overline="Legal"
               heading="Privacy Policy"
@@ -89,13 +90,15 @@ export default function PrivacyPolicy() {
               centered
               dark
             />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ── Content ── */}
-      <section className="py-0 pb-24" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
+          <div className="max-w-4xl mx-auto">
           {/* Tab bar */}
           <div className="mb-10">
             <TabBar tabs={TABS} activeTab={activeTab} onChange={setActiveTab} dark />
@@ -121,6 +124,7 @@ export default function PrivacyPolicy() {
             >
               Contact Us →
             </Link>
+          </div>
           </div>
         </div>
       </section>

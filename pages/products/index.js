@@ -28,10 +28,11 @@ export default function ProductsPage({ agents }) {
       </Head>
 
       {/* Hero */}
-      <section className="relative pt-40 pb-24 overflow-hidden" style={{ background: '#0A0F2C' }}>
+      <section className="relative page-section overflow-hidden" style={{ background: '#0A0F2C' }}>
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(37,57,231,0.18) 0%, transparent 60%)' }} />
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 page-container">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <SectionHeader
               overline="The Product Suite"
               heading="One Platform. Five AI Agents."
@@ -39,6 +40,7 @@ export default function ProductsPage({ agents }) {
               centered
               dark
             />
+            </div>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
@@ -52,8 +54,9 @@ export default function ProductsPage({ agents }) {
       </section>
 
       {/* Pipeline Flow */}
-      <section className="py-12" style={{ background: '#0E1435' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0E1435' }}>
+        <div className="page-container">
+          <div className="max-w-5xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-0">
             {PIPELINE.map((item, i) => (
               <div key={item.slug} className="flex items-center">
@@ -73,9 +76,13 @@ export default function ProductsPage({ agents }) {
         </div>
       </section>
 
+      {/* Lifecycle Pipeline — placed before agent blocks per blueprint */}
+      <LifecyclePipeline />
+
       {/* Agent Cards — alternating layout */}
-      <section className="py-20" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-6xl mx-auto px-6 flex flex-col gap-16">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
+          <div className="max-w-6xl mx-auto flex flex-col gap-16">
           {agents.map((agent, i) => (
             <div key={agent.slug} className={`flex flex-col lg:flex-row gap-12 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
               {/* Text */}
@@ -119,14 +126,67 @@ export default function ProductsPage({ agents }) {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </section>
 
-      {/* Lifecycle Pipeline */}
-      <LifecyclePipeline />
-
       {/* Role Tiles */}
       <RoleTiles />
+
+      {/* Comparison Table */}
+      <section className="page-section" style={{ background: '#0E1435' }}>
+        <div className="page-container">
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <span className="font-mono text-[11px] font-medium tracking-widest uppercase text-[#2539E7] mb-3 block">Compare Agents</span>
+              <h2 className="font-syne font-bold text-3xl md:text-4xl text-white">Which Agent Does What?</h2>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-card overflow-x-auto" style={{ border: '1px solid rgba(255,255,255,0.08)' }}>
+              {/* Header row */}
+              <div className="grid min-w-[700px]" style={{ gridTemplateColumns: '200px repeat(5, 1fr)', background: '#0A0F2C', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+                <div className="px-5 py-4" />
+                {agents.map((a) => (
+                  <div key={a.slug} className="px-4 py-4 text-center">
+                    <span className="inline-block px-2 py-0.5 rounded-pill text-[10px] font-bold uppercase tracking-wide mb-1" style={{ background: `${a.color}20`, color: a.color }}>{a.badge}</span>
+                    <p className="font-syne font-bold text-sm text-white">{a.name}</p>
+                  </div>
+                ))}
+              </div>
+              {/* Feature rows */}
+              {[
+                { label: 'Revenue Stage', values: ['Prospect', 'Qualify', 'Onboard', 'Support', 'Retain'] },
+                { label: 'AI Decision-Making', values: [true, true, true, true, true] },
+                { label: 'CRM Integration', values: [true, true, true, true, true] },
+                { label: 'Multi-Channel Outreach', values: [true, false, false, false, false] },
+                { label: 'Lead Scoring', values: [false, true, false, false, true] },
+                { label: 'Automated Sequences', values: [true, false, true, false, true] },
+                { label: 'Human Handoff', values: [true, true, true, true, false] },
+                { label: 'Compliance & Audit Trail', values: [false, false, true, false, false] },
+                { label: 'Continuous Learning', values: [false, true, false, true, true] },
+              ].map((row, ri) => (
+                <div key={row.label} className="grid min-w-[700px]" style={{ gridTemplateColumns: '200px repeat(5, 1fr)', background: ri % 2 === 0 ? '#0E1435' : 'rgba(10,15,44,0.5)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <div className="px-5 py-3.5 flex items-center">
+                    <span className="font-figtree text-sm text-[#C8CCE0]">{row.label}</span>
+                  </div>
+                  {row.values.map((val, vi) => (
+                    <div key={vi} className="px-4 py-3.5 flex items-center justify-center">
+                      {typeof val === 'boolean' ? (
+                        val
+                          ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="rgba(5,150,105,0.15)"/><path d="M5 8l2.5 2.5L11 6" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                          : <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="rgba(255,255,255,0.04)"/><path d="M10 6l-4 4M6 6l4 4" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                      ) : (
+                        <span className="font-mono text-[11px] font-medium tracking-wide" style={{ color: agents[vi]?.color }}>{val}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* CTA Banner */}
       <CTABanner

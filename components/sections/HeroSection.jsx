@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { useDemoModal } from '../../context/DemoModalContext';
+import { useDemoModal } from '@/context/DemoModalContext';
 import VideoModal from '../modals/VideoModal';
 import GradientOrbFallback from '../three/GradientOrbFallback';
 
-const ParticleSphere = dynamic(() => import('../three/ParticleSphere'), { ssr: false });
+const ParticleSphere = dynamic(() => import('../three/ParticleSphere'), {
+  ssr: false,
+  loading: () => <GradientOrbFallback />,
+});
 
 const TRUST_LOGOS = ['Nexora', 'Veldric', 'SentinelAI', 'Pyramus', 'OmniCore'];
 
@@ -16,7 +19,7 @@ export default function HeroSection() {
   return (
     <>
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center pt-[140px] pb-20 overflow-hidden bg-grid"
+        className="relative min-h-screen flex flex-col items-center justify-center text-center page-section overflow-hidden bg-grid"
         style={{ backgroundColor: '#2539E7' }}
       >
         {/* Particle sphere */}
@@ -44,7 +47,8 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-[860px] mx-auto px-6">
+        <div className="relative z-10 page-container">
+          <div className="max-w-[860px] mx-auto">
           {/* Badge */}
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-6">
             <span className="inline-flex items-center gap-2 font-mono text-[11px] font-medium tracking-widest uppercase px-4 py-1.5 rounded-pill" style={{ background: 'rgba(255,255,255,0.12)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>
@@ -90,6 +94,7 @@ export default function HeroSection() {
               ))}
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
       <VideoModal isOpen={videoOpen} onClose={() => setVideoOpen(false)} />

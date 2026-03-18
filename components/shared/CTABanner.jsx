@@ -1,12 +1,12 @@
-import { useDemoModal } from '../../context/DemoModalContext';
+import { useDemoModal } from '@/context/DemoModalContext';
 import ScrollReveal from './ScrollReveal';
 
 export default function CTABanner({ headline = 'Ready to automate your revenue lifecycle?', buttonText = 'Schedule a Demo →' }) {
   const { openModal } = useDemoModal();
 
   return (
-    <section className="bg-primary py-8 border-y border-white/10">
-      <div className="max-w-content mx-auto px-6">
+    <section className="bg-primary page-section border-y border-white/10">
+      <div className="page-container">
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <p className="font-syne font-semibold text-xl text-white text-center sm:text-left">

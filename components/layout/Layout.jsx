@@ -1,14 +1,14 @@
-import Navbar from '@/components/shared/Navbar';
-import Footer from '@/components/shared/Footer';
-import DemoModal from '@/components/modals/DemoModal';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div className="min-h-screen bg-bg-base flex flex-col">
       <Navbar />
-      <main>{children}</main>
+      <main className="flex-1 flex flex-col min-h-[calc(100vh-72px)]">
+        {children}
+      </main>
       <Footer />
-      <DemoModal />
-    </>
+    </div>
   );
 }

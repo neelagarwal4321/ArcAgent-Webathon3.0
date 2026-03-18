@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Head from 'next/head';
 import { getIndustries } from '../lib/industries';
 import { getAgents } from '../lib/agents';
@@ -19,6 +19,7 @@ const INDUSTRY_ICONS = {
 
 export default function IndustriesPage({ industries, agentMap }) {
   const [activeTab, setActiveTab] = useState(industries[0]?.id || '');
+  const tabSectionRef = useRef(null);
 
   const activeIndustry = industries.find((ind) => ind.id === activeTab);
 
@@ -38,7 +39,7 @@ export default function IndustriesPage({ industries, agentMap }) {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="relative pt-40 pb-20 overflow-hidden" style={{ background: '#0A0F2C' }}>
+      <section className="relative page-section overflow-hidden" style={{ background: '#0A0F2C' }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -46,8 +47,9 @@ export default function IndustriesPage({ industries, agentMap }) {
               'radial-gradient(ellipse at 50% 0%, rgba(37,57,231,0.16) 0%, transparent 60%)',
           }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 page-container">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <SectionHeader
               overline="By Industry"
               heading="Built for Complex, Regulated Industries"
@@ -55,13 +57,14 @@ export default function IndustriesPage({ industries, agentMap }) {
               centered
               dark
             />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ── Tab Bar + Industry Panel ── */}
-      <section className="py-20" style={{ background: '#0E1435' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <section ref={tabSectionRef} className="page-section" style={{ background: '#0E1435' }}>
+        <div className="page-container">
           <ScrollReveal>
             <div className="mb-10 overflow-x-auto">
               <TabBar tabs={tabs} activeTab={activeTab} onChange={setActiveTab} dark />
@@ -164,8 +167,8 @@ export default function IndustriesPage({ industries, agentMap }) {
       </section>
 
       {/* ── All Industries Overview Grid ── */}
-      <section className="py-20" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
           <ScrollReveal>
             <div className="text-center mb-14">
               <span className="font-mono text-[11px] font-medium tracking-widest uppercase text-[#2539E7] mb-3 block">
@@ -182,7 +185,7 @@ export default function IndustriesPage({ industries, agentMap }) {
                 <button
                   onClick={() => {
                     setActiveTab(ind.id);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    tabSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }}
                   className="w-full text-left rounded-card p-7 transition-all duration-300 hover:-translate-y-1 group"
                   style={{

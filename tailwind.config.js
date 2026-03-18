@@ -90,6 +90,9 @@ module.exports = {
       backgroundSize: {
         "grid-32": "32px 32px",
       },
+      transitionDuration: {
+        250: "250ms",
+      },
     },
   },
   plugins: [],

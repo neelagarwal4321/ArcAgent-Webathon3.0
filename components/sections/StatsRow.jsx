@@ -9,7 +9,7 @@ const STATS = [
 function StatCard({ stat, delay }) {
   return (
     <ScrollReveal delay={delay} className="flex-1 min-w-[200px]">
-      <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-7 text-center hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-250">
+      <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-7 text-center hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-[250ms]">
         <p className="font-syne font-extrabold text-[40px] leading-none -tracking-[0.02em] text-primary mb-2">{stat.value}</p>
         <p className="font-syne font-semibold text-base text-text-primary mb-1">{stat.label}</p>
         <p className="font-figtree text-xs text-text-muted">{stat.description}</p>
@@ -20,8 +20,8 @@ function StatCard({ stat, delay }) {
 
 export default function StatsRow() {
   return (
-    <section className="bg-bg-base py-16 px-6">
-      <div className="max-w-content mx-auto">
+    <section className="page-section" style={{ background: '#F5F0E8' }}>
+      <div className="page-container">
         <div className="flex flex-col sm:flex-row gap-6">
           {STATS.map((stat, i) => <StatCard key={stat.label} stat={stat} delay={i * 0.08} />)}
         </div>

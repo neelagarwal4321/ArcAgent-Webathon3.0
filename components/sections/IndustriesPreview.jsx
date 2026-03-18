@@ -6,15 +6,15 @@ const ICONS = { Landmark: '🏦', Cpu: '💻', Heart: '❤️', Scale: '⚖️',
 
 export default function IndustriesPreview({ industries }) {
   return (
-    <section className="bg-bg-alt py-section-md px-6">
-      <div className="max-w-content mx-auto">
+    <section className="bg-bg-alt page-section">
+      <div className="page-container">
         <ScrollReveal className="mb-12">
           <SectionHeader overline="VERTICALS" heading="Built for Complex, Regulated, and High-Volume Industries" centered dark />
         </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
           {industries.slice(0, 6).map((ind, i) => (
             <ScrollReveal key={ind.id} delay={i * 0.06}>
-              <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-6 hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-250 h-full">
+              <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-6 hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-[250ms] h-full">
                 <div className="text-3xl mb-3">{ICONS[ind.icon] || '🏢'}</div>
                 <h3 className="font-syne font-semibold text-base text-text-primary mb-2">{ind.name}</h3>
                 <p className="font-figtree text-xs text-text-muted leading-relaxed">{ind.caseStudySnippet.result}</p>

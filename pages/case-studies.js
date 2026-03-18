@@ -49,7 +49,7 @@ export default function CaseStudiesPage({ caseStudies }) {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="relative pt-40 pb-20 overflow-hidden" style={{ background: '#0A0F2C' }}>
+      <section className="relative page-section overflow-hidden" style={{ background: '#0A0F2C' }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -57,8 +57,9 @@ export default function CaseStudiesPage({ caseStudies }) {
               'radial-gradient(ellipse at 50% 0%, rgba(37,57,231,0.16) 0%, transparent 60%)',
           }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 page-container">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <SectionHeader
               overline="Results"
               heading="Real Results from Real Customers"
@@ -66,13 +67,15 @@ export default function CaseStudiesPage({ caseStudies }) {
               centered
               dark
             />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ── Filter + Accordion List ── */}
-      <section className="py-20" style={{ background: '#F5F0E8' }}>
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#F5F0E8' }}>
+        <div className="page-container">
+          <div className="max-w-4xl mx-auto">
           {/* Filter buttons */}
           <ScrollReveal>
             <div className="flex flex-wrap gap-2 mb-10">
@@ -272,6 +275,7 @@ export default function CaseStudiesPage({ caseStudies }) {
               </p>
             </div>
           )}
+          </div>
         </div>
       </section>
 

@@ -125,6 +125,15 @@ img, video { max-width: 100%; display: block; }
   }
 }
 
+/* ─────────────────────────────────────────────────────────────
+   LAYOUT UTILITIES (SPEC v1.0)
+   ───────────────────────────────────────────────────────────── */
+@layer components {
+  .page-section { @apply py-16 md:py-20 lg:py-[120px]; }
+  .page-container { @apply max-w-content mx-auto px-5 md:px-10 lg:px-20; }
+  .page-container-narrow { @apply max-w-[1200px] mx-auto px-5 md:px-10 lg:px-20; }
+}
+
 /* ══════════════════════════════════════════════
    KEYFRAME ANIMATIONS
    ══════════════════════════════════════════════ */

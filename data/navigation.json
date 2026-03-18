@@ -3,7 +3,9 @@
     { "label": "Products", "href": "/products", "hasMegaMenu": true },
     { "label": "Industries", "href": "/industries" },
     { "label": "Case Studies", "href": "/case-studies" },
-    { "label": "Pricing", "href": "/pricing" }
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "About", "href": "/about" }
   ],
   "agents": [
     { "slug": "arcreach", "name": "ArcReach", "color": "#3B82F6", "oneliner": "Autonomous outbound sales & prospecting" },

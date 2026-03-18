@@ -9,7 +9,7 @@ import ScrollReveal from '../../components/shared/ScrollReveal';
 
 function PostCard({ post }) {
   return (
-    <article className="bg-[#F5F0E8] rounded-card border border-[rgba(10,15,44,0.06)] shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-250 flex flex-col overflow-hidden">
+    <article className="bg-[#F5F0E8] rounded-card border border-[rgba(10,15,44,0.06)] shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-[250ms] flex flex-col overflow-hidden">
       {/* Color strip based on category */}
       <div
         className="h-1.5 w-full shrink-0"
@@ -69,8 +69,8 @@ export default function BlogIndex({ posts, featuredPost }) {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="pt-32 pb-20 bg-[#0A0F2C]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0A0F2C]">
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="Blog"
@@ -84,12 +84,12 @@ export default function BlogIndex({ posts, featuredPost }) {
       </section>
 
       {/* ── Featured Post ── */}
-      <section className="py-16 bg-[#0E1435]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0E1435]">
+        <div className="page-container">
           <ScrollReveal>
             <p className="font-mono text-[11px] font-medium tracking-widest uppercase text-primary mb-6">Featured</p>
             <Link href={`/blog/${featuredPost.slug}`} className="group block">
-              <article className="bg-[#F5F0E8] rounded-card overflow-hidden grid md:grid-cols-2 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-250">
+              <article className="bg-[#F5F0E8] rounded-card overflow-hidden grid md:grid-cols-2 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-[250ms]">
                 {/* Image placeholder */}
                 <div
                   className="h-64 md:h-auto flex items-center justify-center"
@@ -136,8 +136,8 @@ export default function BlogIndex({ posts, featuredPost }) {
       </section>
 
       {/* ── Posts Grid ── */}
-      <section className="py-16 bg-[#0A0F2C]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0A0F2C]">
+        <div className="page-container">
           {/* Category filter */}
           <ScrollReveal>
             <div className="flex flex-wrap gap-2 mb-10">

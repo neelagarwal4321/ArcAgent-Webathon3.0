@@ -74,10 +74,10 @@ export default function About({ team }) {
 
       {/* ── 1. Hero ── */}
       <section
-        className="pt-32 pb-24 flex items-center min-h-[60vh]"
+        className="page-section flex items-center min-h-[60vh]"
         style={{ background: '#2539E7' }}
       >
-        <div className="max-w-content mx-auto px-6 w-full">
+        <div className="page-container w-full">
           <ScrollReveal>
             <p className="font-mono text-[11px] font-medium tracking-widest uppercase text-white/60 mb-4">About ArcAgent</p>
             <h1 className="font-syne font-bold text-4xl md:text-6xl lg:text-7xl text-white leading-[1.05] -tracking-[0.02em] mb-6 max-w-4xl">
@@ -100,8 +100,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 2. Company Story ── */}
-      <section className="py-24 bg-[#0A0F2C]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0A0F2C]">
+        <div className="page-container">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Left: Story */}
             <ScrollReveal direction="left">
@@ -156,8 +156,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 3. Mission & Vision ── */}
-      <section className="py-24 bg-[#0E1435]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0E1435]">
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="Purpose"
@@ -211,8 +211,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 4. Stats Bar ── */}
-      <section className="py-16 bg-[#0E1435] border-y border-white/5">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0E1435] border-y border-white/5">
+        <div className="page-container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {STATS.map((stat, i) => (
               <ScrollReveal key={stat.label} delay={i * 0.07}>
@@ -227,8 +227,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 5. Values ── */}
-      <section className="py-24 bg-[#0A0F2C]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0A0F2C]">
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="What We Believe"
@@ -254,8 +254,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 6. Team Grid ── */}
-      <section className="py-24 bg-[#0E1435]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0E1435]">
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="The People"
@@ -303,8 +303,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 7. Office Locations ── */}
-      <section className="py-24 bg-[#0A0F2C]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0A0F2C]">
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="Where We Are"
@@ -318,7 +318,7 @@ export default function About({ team }) {
             {OFFICES.map((office, i) => (
               <ScrollReveal key={office.city} delay={i * 0.07}>
                 <div
-                  className="rounded-card p-6 border border-white/8 hover:border-white/16 transition-all duration-250"
+                  className="rounded-card p-6 border border-white/8 hover:border-white/16 transition-all duration-[250ms]"
                   style={{ background: 'rgba(255,255,255,0.03)' }}
                 >
                   <div
@@ -341,8 +341,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 8. Partners & Investors ── */}
-      <section className="py-16 bg-[#0E1435] border-y border-white/5">
-        <div className="max-w-content mx-auto px-6">
+      <section className="page-section bg-[#0E1435] border-y border-white/5">
+        <div className="page-container">
           <ScrollReveal>
             <p className="font-mono text-[11px] font-medium tracking-widest uppercase text-[#8088A8] text-center mb-8">Backed by & partnered with</p>
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -360,8 +360,8 @@ export default function About({ team }) {
       </section>
 
       {/* ── 9. Culture + CTA ── */}
-      <section className="py-24 bg-[#0A0F2C]">
-        <div className="max-w-content mx-auto px-6 text-center">
+      <section className="page-section bg-[#0A0F2C]">
+        <div className="page-container text-center">
           <ScrollReveal>
             <SectionHeader
               overline="Culture"

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import navData from '../../data/navigation.json';
+import navData from '@/data/navigation.json';
 
 export default function MegaMenu({ open }) {
   return (
@@ -9,7 +9,7 @@ export default function MegaMenu({ open }) {
         <motion.div
           initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-surface-1 rounded-card shadow-glass border border-[rgba(10,15,44,0.08)] p-5 z-50"
+          className="absolute left-1/2 -translate-x-1/2 top-[72px] w-[640px] bg-surface-1 rounded-card shadow-glass border border-[rgba(10,15,44,0.08)] p-6 z-50"
         >
           <Link href="/products" className="block text-xs font-mono tracking-wider text-primary uppercase mb-4 hover:text-primary-hover transition-colors">
             Overview — See all agents →

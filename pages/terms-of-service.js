@@ -63,7 +63,7 @@ const CONTENT = {
       'Any dispute arising out of or relating to these Terms or the Services that cannot be resolved informally shall be resolved through binding arbitration administered by the American Arbitration Association ("AAA") under its Commercial Arbitration Rules, except that either party may seek injunctive or other equitable relief in any court of competent jurisdiction to prevent actual or threatened infringement of intellectual property rights.',
       'The arbitration shall be conducted in English, in San Francisco, California, USA. The arbitrator\'s award shall be final and binding. Each party shall bear its own arbitration fees and costs, except that the arbitrator may award fees and costs to the prevailing party. CLASS ACTION WAIVER: YOU AND ARCAGENT AGREE THAT EACH PARTY MAY BRING CLAIMS ONLY IN ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS ACTION.',
       'TO THE MAXIMUM EXTENT PERMITTED BY LAW: (A) IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES; AND (B) ARCAGENT\'S TOTAL LIABILITY TO YOU ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICES SHALL NOT EXCEED THE TOTAL FEES PAID BY YOU IN THE 12 MONTHS PRECEDING THE EVENT GIVING RISE TO LIABILITY.',
-      'Questions about these Terms? Contact us at legal@arcagent.io or write to ArcAgent, Inc., Attn: Legal Department, 1 Market Street, Suite 300, San Francisco, CA 94105.',
+      'Questions about these Terms? Contact us at legal@arcagent.ai or write to ArcAgent, Inc., Attn: Legal Department, 1 Market Street, Suite 300, San Francisco, CA 94105.',
     ],
   },
 };
@@ -80,9 +80,10 @@ export default function TermsOfService() {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="pt-32 pb-16" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container text-center">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <SectionHeader
               overline="Legal"
               heading="Terms of Service"
@@ -90,13 +91,15 @@ export default function TermsOfService() {
               centered
               dark
             />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ── Content ── */}
-      <section className="py-0 pb-24" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
+          <div className="max-w-4xl mx-auto">
           {/* Tab bar */}
           <div className="mb-10">
             <TabBar tabs={TABS} activeTab={activeTab} onChange={setActiveTab} dark />
@@ -122,6 +125,7 @@ export default function TermsOfService() {
             >
               Contact Us →
             </Link>
+          </div>
           </div>
         </div>
       </section>

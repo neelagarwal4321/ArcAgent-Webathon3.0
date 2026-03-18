@@ -15,8 +15,8 @@ export default function AgentCarousel({ agents }) {
   const agent = agents[current];
 
   return (
-    <section className="bg-bg-base py-section-md px-6">
-      <div className="max-w-content mx-auto">
+    <section className="bg-bg-base page-section">
+      <div className="page-container">
         <ScrollReveal className="mb-12">
           <SectionHeader overline="PRODUCTS" heading="The ArcAgent Suite" centered dark />
         </ScrollReveal>

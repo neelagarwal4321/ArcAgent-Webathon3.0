@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useDemoModal } from '../../context/DemoModalContext';
+import { useDemoModal } from '@/context/DemoModalContext';
 import Input from '../ui/Input';
 
 const AGENTS = ['ArcReach', 'ArcQual', 'ArcBoard', 'ArcDesk', 'ArcPulse', "Not sure yet"];

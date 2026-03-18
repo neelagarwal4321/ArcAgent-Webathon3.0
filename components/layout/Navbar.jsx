@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useScrolled } from '../../hooks/useScrolled';
-import { useDemoModal } from '../../context/DemoModalContext';
+import { useScrolled } from '@/hooks/useScrolled';
+import { useDemoModal } from '@/context/DemoModalContext';
 import MegaMenu from './MegaMenu';
 import MobileNav from './MobileNav';
-import navData from '../../data/navigation.json';
+import navData from '@/data/navigation.json';
 
 export default function Navbar() {
   const scrolled = useScrolled(20);
@@ -19,12 +19,12 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled ? 'border-b border-white/8' : ''
         }`}
         style={scrolled ? { background: 'rgba(10,15,44,0.9)', backdropFilter: 'blur(16px)' } : {}}
       >
-        <div className="max-w-content mx-auto px-6 h-[72px] flex items-center justify-between">
+        <div className="page-container h-[72px] flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
             <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
@@ -74,12 +74,20 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Hamburger */}
-          <button onClick={() => setMobileOpen(true)} className="md:hidden p-2 text-text-on-dark-secondary hover:text-white transition-colors">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-          </button>
+          {/* Mobile CTAs */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={openModal}
+              className="font-figtree font-medium text-xs bg-primary text-white px-3.5 py-2 rounded-button hover:bg-primary-hover transition-colors"
+            >
+              Schedule
+            </button>
+            <button onClick={() => setMobileOpen(true)} className="p-2 text-text-on-dark-secondary hover:text-white transition-colors">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </header>
       <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />

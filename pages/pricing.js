@@ -113,7 +113,7 @@ export default function PricingPage({ tiers }) {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="relative pt-40 pb-20 overflow-hidden" style={{ background: '#0A0F2C' }}>
+      <section className="relative page-section overflow-hidden" style={{ background: '#0A0F2C' }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -121,8 +121,9 @@ export default function PricingPage({ tiers }) {
               'radial-gradient(ellipse at 50% 0%, rgba(37,57,231,0.16) 0%, transparent 60%)',
           }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="relative z-10 page-container">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <SectionHeader
               overline="Pricing"
               heading="Simple, Transparent Pricing"
@@ -130,6 +131,7 @@ export default function PricingPage({ tiers }) {
               centered
               dark
             />
+            </div>
           </ScrollReveal>
 
           {/* Monthly / Annual toggle */}
@@ -171,8 +173,8 @@ export default function PricingPage({ tiers }) {
       </section>
 
       {/* ── Pricing Cards ── */}
-      <section className="pb-24 pt-6" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tiers.map((tier, i) => (
               <ScrollReveal key={tier.name} delay={i * 0.08}>
@@ -302,8 +304,8 @@ export default function PricingPage({ tiers }) {
       </section>
 
       {/* ── Comparison Table ── */}
-      <section className="py-20" style={{ background: '#0E1435' }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0E1435' }}>
+        <div className="page-container">
           <ScrollReveal>
             <div className="text-center mb-14">
               <span className="font-mono text-[11px] font-medium tracking-widest uppercase text-[#2539E7] mb-3 block">
@@ -316,8 +318,9 @@ export default function PricingPage({ tiers }) {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
+            <div className="overflow-x-auto">
             <div
-              className="rounded-card overflow-hidden"
+              className="rounded-card overflow-hidden min-w-[640px]"
               style={{ border: '1px solid rgba(255,255,255,0.08)' }}
             >
               {/* Table header */}
@@ -391,6 +394,7 @@ export default function PricingPage({ tiers }) {
                   ))}
                 </div>
               ))}
+            </div>
             </div>
           </ScrollReveal>
         </div>

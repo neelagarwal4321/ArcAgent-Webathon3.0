@@ -45,11 +45,12 @@ export default function Careers({ careers }) {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20" style={{ background: '#2539E7' }}>
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden page-section" style={{ background: '#2539E7' }}>
         <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%)' }} />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center py-24">
+        <div className="relative z-10 page-container text-center">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <span className="inline-block px-4 py-1.5 rounded-pill text-xs font-bold uppercase tracking-widest mb-6" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff' }}>
               We&apos;re Hiring
             </span>
@@ -66,13 +67,14 @@ export default function Careers({ careers }) {
             >
               View Open Roles ↓
             </a>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ── Values ── */}
-      <section className="py-24" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="How We Work"
@@ -98,8 +100,8 @@ export default function Careers({ careers }) {
       </section>
 
       {/* ── Perks ── */}
-      <section className="py-24" style={{ background: '#0E1435' }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0E1435' }}>
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="Benefits"
@@ -125,8 +127,8 @@ export default function Careers({ careers }) {
       </section>
 
       {/* ── Open Roles ── */}
-      <section id="roles" className="py-24 scroll-mt-20" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <section id="roles" className="page-section scroll-mt-20" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="Open Positions"
@@ -199,20 +201,22 @@ export default function Careers({ careers }) {
       </section>
 
       {/* ── Bottom CTA ── */}
-      <section className="py-16" style={{ background: '#0E1435', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-        <div className="max-w-2xl mx-auto px-6 text-center">
+      <section className="page-section" style={{ background: '#0E1435', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="page-container text-center">
           <ScrollReveal>
+            <div className="max-w-2xl mx-auto">
             <h3 className="font-syne font-bold text-2xl text-white mb-3">Don&apos;t See Your Role?</h3>
             <p className="text-[#C8CCE0] mb-6">
               We&apos;re always interested in exceptional people. Send your resume and a note about what you&apos;d want to build at ArcAgent.
             </p>
             <a
-              href="mailto:careers@arcagent.io"
+              href="mailto:careers@arcagent.ai"
               className="inline-flex items-center gap-2 font-figtree font-medium text-base transition-colors"
               style={{ color: '#2539E7' }}
             >
-              careers@arcagent.io →
+              careers@arcagent.ai →
             </a>
+            </div>
           </ScrollReveal>
         </div>
       </section>

@@ -12,14 +12,15 @@ export default function BlogPost({ post, relatedPosts }) {
   return (
     <>
       <Head>
-        <title>{post.title} — ArcAgent Blog</title>
+        <title>{`${post.title} — ArcAgent Blog`}</title>
         <meta name="description" content={post.excerpt} />
       </Head>
 
       {/* ── Post Header ── */}
-      <section className="pt-28 pb-12 bg-[#0A0F2C]">
-        <div className="max-w-prose mx-auto px-6">
-          <ScrollReveal>
+      <section className="page-section bg-[#0A0F2C]">
+        <div className="page-container">
+          <div className="max-w-prose mx-auto">
+            <ScrollReveal>
             <Link
               href="/blog"
               className="inline-flex items-center gap-1.5 font-figtree text-sm text-[#8088A8] hover:text-white transition-colors mb-8"
@@ -57,52 +58,55 @@ export default function BlogPost({ post, relatedPosts }) {
                 <p className="font-figtree text-xs text-[#8088A8]">{post.readTime}</p>
               </div>
             </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       {/* ── Post Body ── */}
-      <section className="py-12 bg-[#0E1435]">
-        <div className="max-w-prose mx-auto px-6">
-          <ScrollReveal>
-            <div
-              className="blog-prose"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-          </ScrollReveal>
-        </div>
+      <section className="page-section bg-[#0E1435]">
+        <div className="page-container">
+          <div className="max-w-prose mx-auto">
+            <ScrollReveal>
+              <div
+                className="blog-prose"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            </ScrollReveal>
+          </div>
 
-        {/* ── Author Bio Card ── */}
-        <div className="max-w-prose mx-auto px-6 mt-14">
-          <ScrollReveal>
-            <Card hover={false} className="p-6">
-              <div className="flex items-start gap-4">
-                <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center text-white font-mono text-sm font-bold shrink-0"
-                  style={{ background: '#2539E7' }}
-                >
-                  {post.author.initials}
+          {/* ── Author Bio Card ── */}
+          <div className="max-w-prose mx-auto mt-14">
+            <ScrollReveal>
+              <Card hover={false} className="p-6">
+                <div className="flex items-start gap-4">
+                  <div
+                    className="w-14 h-14 rounded-full flex items-center justify-center text-white font-mono text-sm font-bold shrink-0"
+                    style={{ background: '#2539E7' }}
+                  >
+                    {post.author.initials}
+                  </div>
+                  <div>
+                    <p className="font-figtree text-xs font-medium tracking-widest uppercase text-[#6B7094] mb-1">Written by</p>
+                    <p className="font-syne font-bold text-lg text-[#0A0F2C] mb-0.5">{post.author.name}</p>
+                    {post.author.role && (
+                      <p className="font-figtree text-sm text-[#3D4260] mb-3">{post.author.role}</p>
+                    )}
+                    <p className="font-figtree text-sm text-[#6B7094] leading-relaxed">
+                      Part of the ArcAgent leadership team, focused on building the future of autonomous revenue operations for enterprise companies.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-figtree text-xs font-medium tracking-widest uppercase text-[#6B7094] mb-1">Written by</p>
-                  <p className="font-syne font-bold text-lg text-[#0A0F2C] mb-0.5">{post.author.name}</p>
-                  {post.author.role && (
-                    <p className="font-figtree text-sm text-[#3D4260] mb-3">{post.author.role}</p>
-                  )}
-                  <p className="font-figtree text-sm text-[#6B7094] leading-relaxed">
-                    Part of the ArcAgent leadership team, focused on building the future of autonomous revenue operations for enterprise companies.
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </ScrollReveal>
+              </Card>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       {/* ── Related Posts ── */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 bg-[#0A0F2C]">
-          <div className="max-w-content mx-auto px-6">
+        <section className="page-section bg-[#0A0F2C]">
+          <div className="page-container">
             <ScrollReveal>
               <p className="font-mono text-[11px] font-medium tracking-widest uppercase text-primary mb-2">Keep Reading</p>
               <h2 className="font-syne font-bold text-2xl text-white mb-8">Related Articles</h2>
@@ -111,7 +115,7 @@ export default function BlogPost({ post, relatedPosts }) {
               {relatedPosts.map((related, i) => (
                 <ScrollReveal key={related.slug} delay={i * 0.08}>
                   <Link href={`/blog/${related.slug}`} className="group block h-full">
-                    <article className="bg-[#F5F0E8] rounded-card border border-[rgba(10,15,44,0.06)] shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-250 flex flex-col h-full overflow-hidden">
+                    <article className="bg-[#F5F0E8] rounded-card border border-[rgba(10,15,44,0.06)] shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-[250ms] flex flex-col h-full overflow-hidden">
                       <div
                         className="h-1.5 w-full shrink-0"
                         style={{ background: related.category === 'Engineering' ? '#00E5FF' : related.category === 'Product' ? '#2539E7' : '#7C3AED' }}

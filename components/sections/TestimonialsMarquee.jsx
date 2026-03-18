@@ -24,23 +24,23 @@ export default function TestimonialsMarquee({ testimonials }) {
   const row2 = testimonials.slice(half);
 
   return (
-    <section className="bg-bg-base py-section-md overflow-hidden">
-      <div className="max-w-content mx-auto px-6 mb-12">
+    <section className="bg-bg-base page-section overflow-hidden">
+      <div className="page-container mb-12">
         <ScrollReveal>
           <SectionHeader overline="SOCIAL PROOF" heading="Trusted by Revenue Leaders Worldwide" centered dark />
         </ScrollReveal>
       </div>
 
       {/* Row 1 — scrolls left */}
-      <div className="flex mb-4 hover:[animation-play-state:paused]">
-        <div className="flex animate-marquee-left">
+      <div className="flex mb-4 group">
+        <div className="flex animate-marquee-left group-hover:[animation-play-state:paused]">
           {[...row1, ...row1].map((t, i) => <TestimonialCard key={i} t={t} />)}
         </div>
       </div>
 
       {/* Row 2 — scrolls right */}
-      <div className="flex hover:[animation-play-state:paused]">
-        <div className="flex animate-marquee-right">
+      <div className="flex group">
+        <div className="flex animate-marquee-right group-hover:[animation-play-state:paused]">
           {[...row2, ...row2].map((t, i) => <TestimonialCard key={i} t={t} />)}
         </div>
       </div>

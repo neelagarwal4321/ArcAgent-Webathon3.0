@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NewsletterSignup from '@/components/layout/NewsletterSignup';
 
 const FOOTER_LINKS = {
   Products: [
@@ -52,7 +53,7 @@ function GitHubIcon() {
 export default function Footer() {
   return (
     <footer style={{ background: '#070F1F' }}>
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-content mx-auto px-6 py-16">
         {/* Top row */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-10 mb-12">
           {/* Brand */}
@@ -86,10 +87,23 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Newsletter */}
+        <div
+          className="flex flex-col sm:flex-row items-center justify-between gap-4 py-8"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.08)', borderBottom: '1px solid rgba(255,255,255,0.08)' }}
+        >
+          <div>
+            <p className="font-figtree font-medium text-sm text-text-on-dark-secondary mb-1">Stay updated on agentic AI</p>
+            <p className="font-figtree text-xs text-[#8088A8]">Join 5,000+ revenue leaders who get our weekly insights.</p>
+          </div>
+          <div className="w-full sm:w-auto sm:min-w-[320px]">
+            <NewsletterSignup />
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div
           className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
         >
           <p className="text-sm text-[#8088A8]">© 2026 ArcAgent. All rights reserved.</p>
           <div className="flex items-center gap-4">

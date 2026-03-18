@@ -33,8 +33,8 @@ export default function BeforeAfterSlider() {
   };
 
   return (
-    <section className="bg-bg-base py-section-md px-6">
-      <div className="max-w-content mx-auto">
+    <section className="bg-bg-base page-section">
+      <div className="page-container">
         <ScrollReveal className="mb-12">
           <SectionHeader overline="THE DIFFERENCE" heading="Before and After ArcAgent" centered dark />
         </ScrollReveal>

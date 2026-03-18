@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { getAgents, getAgentBySlug, getAgentSlugs } from '../../lib/agents';
-import { useDemoModal } from '../../context/DemoModalContext';
-import Button from '../../components/ui/Button';
-import MetricCard from '../../components/ui/MetricCard';
-import ScrollReveal from '../../components/shared/ScrollReveal';
-import FAQSection from '../../components/shared/FAQSection';
-import AgentCTABanner from '../../components/shared/AgentCTABanner';
-import AgentDashboard from '../../components/dashboard/AgentDashboard';
+import { getAgents, getAgentBySlug, getAgentSlugs } from '@/lib/agents';
+import { useDemoModal } from '@/context/DemoModalContext';
+import Button from '@/components/ui/Button';
+import MetricCard from '@/components/ui/MetricCard';
+import ScrollReveal from '@/components/shared/ScrollReveal';
+import FAQSection from '@/components/shared/FAQSection';
+import AgentCTABanner from '@/components/shared/AgentCTABanner';
+import AgentDashboard from '@/components/dashboard/AgentDashboard';
 
 export default function AgentPage({ agent }) {
   const { openModal } = useDemoModal();
@@ -16,12 +16,12 @@ export default function AgentPage({ agent }) {
   return (
     <>
       <Head>
-        <title>{agent.name} — ArcAgent</title>
+        <title>{`${agent.name} — ArcAgent`}</title>
         <meta name="description" content={agent.description} />
       </Head>
 
       {/* ── Hero ── */}
-      <section className="relative pt-40 pb-24 overflow-hidden" style={{ background: '#0A0F2C' }}>
+      <section className="relative page-section overflow-hidden" style={{ background: '#0A0F2C' }}>
         {/* Accent glow behind heading */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -29,7 +29,8 @@ export default function AgentPage({ agent }) {
             background: `radial-gradient(ellipse at 60% 0%, ${agent.color}22 0%, transparent 55%)`,
           }}
         />
-        <div className="relative z-10 max-w-5xl mx-auto px-6">
+        <div className="relative z-10 page-container">
+          <div className="max-w-5xl mx-auto">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-6 text-sm text-[#8088A8]">
             <Link href="/products" className="hover:text-white transition-colors">
@@ -73,13 +74,15 @@ export default function AgentPage({ agent }) {
               See All Products
             </Button>
           </div>
+          </div>
         </div>
       </section>
 
       {/* ── Problem Statement ── */}
       {agent.problem && (
-        <section className="py-20" style={{ background: '#F5F0E8' }}>
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="page-section" style={{ background: '#F5F0E8' }}>
+          <div className="page-container">
+            <div className="max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                 {/* Left: problem title + body */}
@@ -166,14 +169,16 @@ export default function AgentPage({ agent }) {
                 </div>
               </div>
             </ScrollReveal>
+            </div>
           </div>
         </section>
       )}
 
       {/* ── Agent Dashboard ── */}
       {agent.dashboardData && (
-        <section className="py-20" style={{ background: '#0E1435' }}>
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="page-section" style={{ background: '#0E1435' }}>
+          <div className="page-container">
+            <div className="max-w-6xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
                 <span
@@ -188,14 +193,16 @@ export default function AgentPage({ agent }) {
               </div>
             </ScrollReveal>
             <AgentDashboard agent={agent} />
+            </div>
           </div>
         </section>
       )}
 
       {/* ── Feature Grid ── */}
       {agent.features && (
-        <section className="py-20" style={{ background: '#0A0F2C' }}>
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="page-section" style={{ background: '#0A0F2C' }}>
+          <div className="page-container">
+            <div className="max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
                 <span
@@ -238,14 +245,16 @@ export default function AgentPage({ agent }) {
                 </ScrollReveal>
               ))}
             </div>
+            </div>
           </div>
         </section>
       )}
 
       {/* ── How It Works ── */}
       {agent.steps && (
-        <section className="py-20" style={{ background: '#0E1435' }}>
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="page-section" style={{ background: '#0E1435' }}>
+          <div className="page-container">
+            <div className="max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-14">
                 <span
@@ -285,41 +294,55 @@ export default function AgentPage({ agent }) {
                 </ScrollReveal>
               ))}
             </div>
+            </div>
           </div>
         </section>
       )}
 
       {/* ── Integration Logos ── */}
       {agent.integrations && (
-        <section className="py-16" style={{ background: '#0A0F2C' }}>
-          <div className="max-w-5xl mx-auto px-6 text-center">
+        <section className="page-section" style={{ background: '#0A0F2C' }}>
+          <div className="page-container text-center">
+            <div className="max-w-5xl mx-auto">
             <ScrollReveal>
-              <h2 className="font-syne font-bold text-2xl text-white mb-8">
-                Works With Everything You Use
-              </h2>
-              <div className="flex flex-wrap justify-center gap-3">
-                {agent.integrations.map((name) => (
-                  <span
-                    key={name}
-                    className="px-4 py-2 rounded-pill font-figtree text-sm font-medium text-[#C8CCE0]"
-                    style={{
-                      background: '#0E1435',
-                      border: '1px solid rgba(255,255,255,0.1)',
-                    }}
-                  >
-                    {name}
-                  </span>
-                ))}
-              </div>
+              <span className="font-mono text-[11px] font-medium tracking-widest uppercase mb-3 block" style={{ color: agent.color }}>Integrations</span>
+              <h2 className="font-syne font-bold text-3xl text-white mb-4">Works With Everything You Use</h2>
+              <p className="font-figtree text-[#8088A8] text-base mb-12 max-w-xl mx-auto">
+                {agent.name} connects natively to your existing stack — no re-platforming required.
+              </p>
             </ScrollReveal>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+              {agent.integrations.map((name, i) => (
+                <ScrollReveal key={name} delay={i * 0.04}>
+                  <div
+                    className="group flex flex-col items-center gap-2.5 p-4 rounded-card cursor-default transition-all duration-200 hover:-translate-y-0.5"
+                    style={{ background: '#0E1435', border: '1px solid rgba(255,255,255,0.07)' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor = `${agent.color}50`}
+                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'}
+                  >
+                    <div
+                      className="w-10 h-10 rounded-[10px] flex items-center justify-center font-mono font-bold text-sm transition-colors duration-200"
+                      style={{ background: 'rgba(255,255,255,0.06)', color: '#C8CCE0' }}
+                    >
+                      {name.slice(0, 2).toUpperCase()}
+                    </div>
+                    <span className="font-figtree text-[11px] font-medium text-[#8088A8] leading-tight text-center group-hover:text-[#C8CCE0] transition-colors">
+                      {name}
+                    </span>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+            </div>
           </div>
         </section>
       )}
 
       {/* ── Metrics ── */}
       {agent.metrics && (
-        <section className="py-20" style={{ background: '#F5F0E8' }}>
-          <div className="max-w-5xl mx-auto px-6">
+        <section className="page-section" style={{ background: '#F5F0E8' }}>
+          <div className="page-container">
+            <div className="max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-14">
                 <span
@@ -352,6 +375,7 @@ export default function AgentPage({ agent }) {
                   </div>
                 </ScrollReveal>
               ))}
+            </div>
             </div>
           </div>
         </section>

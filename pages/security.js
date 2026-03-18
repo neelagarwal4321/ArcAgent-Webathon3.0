@@ -71,7 +71,7 @@ const SECURITY_FAQS = [
   },
   {
     question: 'How do I report a vulnerability?',
-    answer: 'We operate a responsible disclosure program. If you discover a security vulnerability, please email security@arcagent.io with a description of the issue and reproduction steps. We acknowledge all reports within 24 hours and commit to a resolution timeline within 90 days for critical findings. We do not pursue legal action against good-faith reporters.',
+    answer: 'We operate a responsible disclosure program. If you discover a security vulnerability, please email security@arcagent.ai with a description of the issue and reproduction steps. We acknowledge all reports within 24 hours and commit to a resolution timeline within 90 days for critical findings. We do not pursue legal action against good-faith reporters.',
   },
 ];
 
@@ -84,9 +84,10 @@ export default function Security() {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="pt-32 pb-24" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container text-center">
           <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-8">
               <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{ background: 'rgba(37,57,231,0.15)', border: '1px solid rgba(37,57,231,0.3)' }}>
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -102,13 +103,14 @@ export default function Security() {
               centered
               dark
             />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ── Certifications ── */}
-      <section className="py-24" style={{ background: '#0E1435' }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0E1435' }}>
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="Compliance"
@@ -137,8 +139,8 @@ export default function Security() {
       </section>
 
       {/* ── Data Practices ── */}
-      <section className="py-24" style={{ background: '#0A0F2C' }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0A0F2C' }}>
+        <div className="page-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
               <SectionHeader
@@ -175,8 +177,8 @@ export default function Security() {
       </section>
 
       {/* ── Infrastructure Flow Diagram ── */}
-      <section className="py-24" style={{ background: '#0E1435' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="page-section" style={{ background: '#0E1435' }}>
+        <div className="page-container">
           <ScrollReveal>
             <SectionHeader
               overline="Architecture"
@@ -227,9 +229,10 @@ export default function Security() {
       />
 
       {/* ── CTA ── */}
-      <section className="py-16" style={{ background: '#0A0F2C', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-        <div className="max-w-2xl mx-auto px-6 text-center">
+      <section className="page-section" style={{ background: '#0A0F2C', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+        <div className="page-container text-center">
           <ScrollReveal>
+            <div className="max-w-2xl mx-auto">
             <h3 className="font-syne font-bold text-2xl text-white mb-3">Questions About Our Security Posture?</h3>
             <p className="text-[#C8CCE0] mb-6">Our security team is available to provide a detailed security review, compliance documentation, and answer any due diligence questions.</p>
             <Link
@@ -239,6 +242,7 @@ export default function Security() {
             >
               Contact Our Security Team →
             </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

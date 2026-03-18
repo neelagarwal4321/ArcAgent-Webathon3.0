@@ -33,12 +33,13 @@ export default function Login() {
         <meta name="description" content="Sign in to your ArcAgent dashboard." />
       </Head>
 
-      <div className="min-h-screen flex items-center justify-center px-4 py-24" style={{ background: '#0A0F2C' }}>
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#0A0F2C' }}>
         {/* Ambient glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(37,57,231,0.15) 0%, transparent 70%)' }} />
 
-        <div className="relative z-10 w-full max-w-[420px]">
-          <div className="rounded-card p-8 shadow-2xl" style={{ background: '#F5F0E8', border: '1px solid rgba(10,15,44,0.08)' }}>
+        <div className="page-container w-full">
+          <div className="relative z-10 w-full max-w-[420px] mx-auto">
+            <div className="rounded-card p-8 shadow-2xl" style={{ background: '#F5F0E8', border: '1px solid rgba(10,15,44,0.08)' }}>
 
             {/* Logo */}
             <div className="flex justify-center mb-8">
@@ -160,6 +161,7 @@ export default function Login() {
               Don&apos;t have an account?{' '}
               <Link href="/contact" className="font-medium" style={{ color: '#2539E7' }}>Contact sales</Link>
             </p>
+            </div>
           </div>
         </div>
       </div>
