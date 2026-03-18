@@ -76,10 +76,10 @@ export default function HeroSection() {
           {/* CTAs */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-            <button onClick={openModal} className="bg-white text-primary font-figtree font-semibold text-sm px-7 py-3.5 rounded-button hover:bg-surface-2 transition-colors active:scale-95 w-full sm:w-auto">
+            <button onClick={openModal} className="bg-white text-primary font-figtree font-semibold text-sm rounded-button hover:bg-surface-2 transition-colors active:scale-95 w-full sm:w-auto" style={{ padding: '16px 32px' }}>
               Deploy Your First Agent →
             </button>
-            <button onClick={() => setVideoOpen(true)} className="font-figtree font-medium text-sm px-7 py-3.5 rounded-button transition-colors w-full sm:w-auto" style={{ border: '1px solid rgba(255,255,255,0.25)', color: 'white' }}>
+            <button onClick={() => setVideoOpen(true)} className="font-figtree font-medium text-sm rounded-button transition-colors w-full sm:w-auto" style={{ padding: '16px 32px', border: '1px solid rgba(255,255,255,0.25)', color: 'white' }}>
               ▶ Watch Demo Video
             </button>
           </motion.div>

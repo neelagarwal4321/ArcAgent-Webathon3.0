@@ -6,7 +6,7 @@ const ICONS = { Landmark: '🏦', Cpu: '💻', Heart: '❤️', Scale: '⚖️',
 
 export default function IndustriesPreview({ industries }) {
   return (
-    <section className="bg-bg-alt page-section">
+    <section className="bg-bg-base page-section">
       <div className="page-container">
         <ScrollReveal className="mb-14">
           <SectionHeader overline="VERTICALS" heading="Built for Complex, Regulated, and High-Volume Industries" centered dark />

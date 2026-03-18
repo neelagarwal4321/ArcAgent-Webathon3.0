@@ -48,11 +48,8 @@ export default function Home({ agents, testimonials, caseStudies, industries }) 
       {/* H4 — Agent Carousel: auto-rotating single card, arrows + dots */}
       <AgentCarousel agents={agents} />
 
-      {/* H5 — Before / After Slider: drag handle comparison */}
+      {/* H5 — Book a Live Demo */}
       <BeforeAfterSlider />
-
-      {/* CTA Banner 1 */}
-      <CTABanner headline="See the full ArcAgent suite in action." buttonText="Book a Live Demo →" />
 
       {/* H6 — How It Works: 4-step process */}
       <HowItWorks />

@@ -84,14 +84,12 @@ function CrossIcon() {
   );
 }
 
-function FeatureCell({ value, highlighted }) {
-  if (value === true) return <CheckIcon color={highlighted ? '#2539E7' : '#059669'} />;
+function FeatureCell({ value }) {
+  if (value === true) return <CheckIcon color="#059669" />;
   if (value === false || value === null) return <CrossIcon />;
   return (
     <span
-      className={`font-figtree text-xs font-medium ${
-        highlighted ? 'text-[#0A0F2C]' : 'text-[#C8CCE0]'
-      }`}
+      className="font-figtree text-xs font-medium text-white"
     >
       {value}
     </span>
@@ -113,7 +111,7 @@ export default function PricingPage({ tiers }) {
       </Head>
 
       {/* ── Hero ── */}
-      <section className="relative pt-16 md:pt-20 lg:pt-28 pb-10 md:pb-12 overflow-hidden" style={{ background: '#0A0F2C' }}>
+      <section className="relative pt-[64px] md:pt-[80px] lg:pt-[120px] pb-10 md:pb-12 overflow-hidden" style={{ background: '#0A0F2C' }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -173,7 +171,7 @@ export default function PricingPage({ tiers }) {
       </section>
 
       {/* ── Pricing Cards ── */}
-      <section className="pt-0 pb-16 md:pb-20 lg:pb-28" style={{ background: '#0A0F2C' }}>
+      <section className="pt-0 pb-[64px] md:pb-[80px] lg:pb-[120px]" style={{ background: '#0A0F2C' }}>
         <div className="page-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tiers.map((tier, i) => (
@@ -347,11 +345,7 @@ export default function PricingPage({ tiers }) {
                         : {}
                     }
                   >
-                    <p
-                      className={`font-syne font-bold text-sm ${
-                        tier.highlighted ? 'text-[#2539E7]' : 'text-white'
-                      }`}
-                    >
+                    <p className="font-syne font-bold text-sm text-white">
                       {tier.name}
                     </p>
                   </div>
@@ -386,10 +380,7 @@ export default function PricingPage({ tiers }) {
                           : {}
                       }
                     >
-                      <FeatureCell
-                        value={tier.features[row.key]}
-                        highlighted={tier.highlighted}
-                      />
+                      <FeatureCell value={tier.features[row.key]} />
                     </div>
                   ))}
                 </div>

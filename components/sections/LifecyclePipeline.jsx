@@ -5,14 +5,14 @@ const STAGES = [
   { step: 1, icon: '⚙️', title: 'Configure', description: 'Define agent scope, set guardrails, connect tools, train on your business context and tone.' },
   { step: 2, icon: '📊', title: 'Monitor', description: 'Real-time dashboards track every decision, flag anomalies, log all actions with full audit trail.' },
   { step: 3, icon: '🧠', title: 'Learn', description: 'Agents analyze outcomes, identify patterns, and refine strategies from every interaction.' },
-  { step: 4, icon: '📈', title: 'Optimize', description: 'Performance improves continuously — conversion rates, resolution speed, and accuracy compound over time.' },
+  { step: 4, icon: '📈', title: 'Optimize', description: 'Performance compounds over time, conversion rates, resolution speed, and accuracy.' },
 ];
 
 export default function LifecyclePipeline({ dark = true }) {
   return (
     <section className={`page-section ${dark ? 'bg-bg-base' : 'bg-bg-alt'}`}>
       <div className="page-container">
-        <ScrollReveal className="mb-4">
+        <ScrollReveal className="mb-14">
           <SectionHeader
             overline="CONTINUOUS IMPROVEMENT"
             heading="Agents That Get Smarter Every Day"

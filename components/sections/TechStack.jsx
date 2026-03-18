@@ -23,8 +23,8 @@ export default function TechStack() {
         </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {STACK.map((col, ci) => (
-            <ScrollReveal key={col.category} delay={ci * 0.08}>
-              <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-6">
+            <ScrollReveal key={col.category} delay={ci * 0.08} className="h-full">
+              <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-6 h-full">
                 <p className="font-syne font-semibold text-sm text-text-primary mb-4">{col.category}</p>
                 <div className="flex flex-wrap gap-2">
                   {col.items.map((item) => (

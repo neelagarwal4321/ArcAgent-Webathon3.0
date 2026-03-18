@@ -201,7 +201,7 @@ export default function Careers({ careers }) {
       </section>
 
       {/* ── Bottom CTA ── */}
-      <section className="py-14 md:py-16" style={{ background: '#0E1435', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <section className="py-[64px] md:py-[80px] lg:py-[120px]" style={{ background: '#0E1435', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="page-container text-center">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto">

@@ -57,21 +57,22 @@ export default function ProductsPage({ agents }) {
       <section className="page-section" style={{ background: '#0E1435' }}>
         <div className="page-container">
           <div className="max-w-5xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-0">
-            {PIPELINE.map((item, i) => (
-              <div key={item.slug} className="flex items-center">
-                <Link href={`/products/${item.slug}`} className="flex flex-col items-center gap-2 group px-5 py-4 rounded-card hover:bg-white/5 transition-colors">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center border-2 group-hover:scale-110 transition-transform" style={{ borderColor: item.color, background: `${item.color}15` }}>
-                    <span className="text-xs font-bold" style={{ color: item.color }}>{String(i+1).padStart(2,'0')}</span>
-                  </div>
-                  <span className="text-sm font-bold text-white">{item.agent}</span>
-                  <span className="text-xs text-[#8088A8]">{item.stage}</span>
-                </Link>
-                {i < PIPELINE.length - 1 && (
-                  <span className="text-[#8088A8] text-lg hidden md:block mx-1">→</span>
-                )}
-              </div>
-            ))}
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-0">
+              {PIPELINE.map((item, i) => (
+                <div key={item.slug} className="flex items-center">
+                  <Link href={`/products/${item.slug}`} className="flex flex-col items-center gap-2 group px-5 py-4 rounded-card hover:bg-white/5 transition-colors">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center border-2 group-hover:scale-110 transition-transform" style={{ borderColor: item.color, background: `${item.color}15` }}>
+                      <span className="text-xs font-bold" style={{ color: item.color }}>{String(i+1).padStart(2,'0')}</span>
+                    </div>
+                    <span className="text-sm font-bold text-white">{item.agent}</span>
+                    <span className="text-xs text-[#8088A8]">{item.stage}</span>
+                  </Link>
+                  {i < PIPELINE.length - 1 && (
+                    <span className="text-[#8088A8] text-lg hidden md:block mx-1">→</span>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -1,107 +1,90 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import SectionHeader from '../ui/SectionHeader';
 import ScrollReveal from '../shared/ScrollReveal';
+import { useDemoModal } from '@/context/DemoModalContext';
 
-const BEFORE = [
-  { icon: '✗', text: '14-day onboarding cycle' },
-  { icon: '✗', text: '62% of leads go cold before contact' },
-  { icon: '✗', text: '11-minute average support response' },
-  { icon: '✗', text: '$340 cost per support ticket' },
-  { icon: '✗', text: '8% annual churn rate' },
-  { icon: '✗', text: 'Manual CRM updates, 3 hours/day' },
+const PERKS = [
+  '30-minute session',
+  'No commitment',
+  'Tailored to your workflows',
+  'Live Q&A included',
 ];
 
-const AFTER = [
-  { icon: '✓', text: '4-hour onboarding with ArcBoard' },
-  { icon: '✓', text: '98% of leads contacted in < 8 seconds' },
-  { icon: '✓', text: 'Instant resolution, 89% auto-handled' },
-  { icon: '✓', text: '$47 cost per ticket with ArcDesk' },
-  { icon: '✓', text: '3.2% churn with ArcPulse monitoring' },
-  { icon: '✓', text: 'Zero manual entry — full CRM sync' },
-];
-
-export default function BeforeAfterSlider() {
-  const [pos, setPos] = useState(50);
-  const containerRef = useRef(null);
-
-  const handleDrag = (e, info) => {
-    if (!containerRef.current) return;
-    const { left, width } = containerRef.current.getBoundingClientRect();
-    const x = info.point.x - left;
-    setPos(Math.min(90, Math.max(10, (x / width) * 100)));
-  };
+export default function BookDemo() {
+  const { openModal } = useDemoModal();
 
   return (
     <section className="bg-bg-base page-section">
       <div className="page-container">
-        <ScrollReveal className="mb-14">
-          <SectionHeader overline="THE DIFFERENCE" heading="Before and After ArcAgent" centered dark />
-        </ScrollReveal>
-
-        {/* Desktop slider */}
-        <div ref={containerRef} className="relative hidden md:flex rounded-card overflow-hidden shadow-card-md" style={{ minHeight: 380 }}>
-          {/* Before */}
-          <div className="absolute inset-0 flex" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)`, background: 'rgba(239,68,68,0.04)' }}>
-            <div className="w-full p-10">
-              <p className="font-figtree font-semibold text-base text-red-400 mb-5">Without ArcAgent</p>
-              <div className="space-y-3">
-                {BEFORE.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-red-400 font-bold mt-0.5 shrink-0">{item.icon}</span>
-                    <span className="font-figtree text-sm text-text-secondary">{item.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* After */}
-          <div className="w-full p-10" style={{ background: 'rgba(5,150,105,0.04)' }}>
-            <p className="font-figtree font-semibold text-base mb-5" style={{ color: '#059669' }}>With ArcAgent</p>
-            <div className="space-y-3">
-              {AFTER.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <span className="font-bold mt-0.5 shrink-0" style={{ color: '#059669' }}>{item.icon}</span>
-                  <span className="font-figtree text-sm text-text-secondary">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Slider handle */}
-          <motion.div
-            className="absolute top-0 bottom-0 z-10 flex items-center justify-center cursor-ew-resize"
-            style={{ left: `${pos}%`, transform: 'translateX(-50%)' }}
-            drag="x" dragConstraints={containerRef} dragElastic={0}
-            onDrag={handleDrag}
+        <ScrollReveal>
+          <div
+            className="relative rounded-card overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #0E1435 0%, #111836 60%, #0A0F2C 100%)',
+              border: '1px solid rgba(37,57,231,0.35)',
+              boxShadow: '0 0 60px rgba(37,57,231,0.18), 0 0 120px rgba(37,57,231,0.08), inset 0 1px 0 rgba(255,255,255,0.06)',
+            }}
           >
-            <div className="w-1 h-full bg-primary opacity-60" />
-            <div className="absolute w-10 h-10 rounded-full bg-surface-1 shadow-card-md border border-[rgba(10,15,44,0.1)] flex items-center justify-center gap-1">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M3 2L1 5l2 3M7 2l2 3-2 3" stroke="#2539E7" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </div>
-          </motion.div>
-        </div>
+            {/* Strong top spotlight */}
+            <div
+              className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
+              style={{
+                top: '-80px',
+                width: '700px',
+                height: '500px',
+                background: 'radial-gradient(ellipse at 50% 0%, rgba(37,57,231,0.55) 0%, rgba(37,57,231,0.15) 35%, transparent 70%)',
+              }}
+            />
+            {/* Secondary cyan accent */}
+            <div
+              className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
+              style={{
+                top: '-40px',
+                width: '300px',
+                height: '200px',
+                background: 'radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.12) 0%, transparent 70%)',
+              }}
+            />
 
-        {/* Mobile stacked */}
-        <div className="md:hidden grid grid-cols-1 gap-4">
-          {[
-            { title: 'Without ArcAgent', items: BEFORE, bg: 'rgba(239,68,68,0.04)', titleColor: '#EF4444' },
-            { title: 'With ArcAgent', items: AFTER, bg: 'rgba(5,150,105,0.04)', titleColor: '#059669' },
-          ].map((side) => (
-            <div key={side.title} className="rounded-card p-7 shadow-card" style={{ background: side.bg }}>
-              <p className="font-figtree font-semibold text-base mb-4" style={{ color: side.titleColor }}>{side.title}</p>
-              <div className="space-y-2.5">
-                {side.items.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <span className="font-bold shrink-0" style={{ color: side.titleColor }}>{item.icon}</span>
-                    <span className="font-figtree text-sm text-text-secondary">{item.text}</span>
-                  </div>
+            <div className="relative z-10 flex flex-col items-center text-center px-8 py-16 md:py-20 md:px-16">
+              {/* Eyebrow */}
+              <span className="inline-block font-syne font-semibold text-xs tracking-widest uppercase text-[#00E5FF] mb-5">
+                Live Demo
+              </span>
+
+              {/* Heading */}
+              <h2 className="font-syne font-bold text-4xl md:text-5xl text-white leading-tight mb-5 max-w-2xl">
+                See what ArcAgent can do{' '}
+                <span className="text-gradient-blue">for your team</span>
+              </h2>
+
+              {/* Sub */}
+              <p className="font-figtree text-base md:text-lg max-w-lg mb-10" style={{ color: '#C8CCE0' }}>
+                A live walkthrough built around your pipeline — no slides, no fluff. Just agents working.
+              </p>
+
+              {/* CTA */}
+              <button
+                onClick={openModal}
+                className="inline-flex items-center gap-2.5 bg-primary hover:bg-primary-dark text-white font-figtree font-semibold text-sm px-9 py-4 rounded-pill transition-colors mb-10"
+                style={{ boxShadow: '0 0 24px rgba(37,57,231,0.45)' }}
+              >
+                Book a Live Demo
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              {/* Perks */}
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                {PERKS.map((p) => (
+                  <span key={p} className="flex items-center gap-1.5 font-figtree text-xs" style={{ color: '#8088A8' }}>
+                    <span style={{ color: '#00E5FF' }}>✓</span>
+                    {p}
+                  </span>
                 ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

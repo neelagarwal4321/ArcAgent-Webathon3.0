@@ -12,7 +12,7 @@ const ROLES = [
 
 export default function RoleTiles() {
   return (
-    <section className="bg-bg-alt page-section">
+    <section className="bg-bg-base page-section">
       <div className="page-container">
         <ScrollReveal className="mb-14">
           <SectionHeader overline="WHO IT'S FOR" heading="Built for Every Revenue Leader" centered dark />
@@ -20,7 +20,7 @@ export default function RoleTiles() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {ROLES.map((r, i) => (
             <ScrollReveal key={r.role} delay={i * 0.08}>
-              <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-7 h-full hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-[250ms]">
+              <div className="bg-surface-1 rounded-card shadow-card border border-[rgba(10,15,44,0.06)] p-8 h-full hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-[250ms]">
                 <div className="text-3xl mb-4">{r.icon}</div>
                 <h3 className="font-syne font-semibold text-lg text-text-primary mb-2">{r.role}</h3>
                 <p className="font-figtree text-sm text-text-secondary leading-relaxed mb-5">{r.description}</p>
