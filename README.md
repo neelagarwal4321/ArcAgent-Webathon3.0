@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ArcAgent — Autonomous Revenue OS
+
+ArcAgent is a B2B SaaS platform that deploys AI agents to automate the entire revenue lifecycle for enterprise companies. Built for Webathon 3.0.
+
+## Overview
+
+The platform showcases five specialized AI agents — **ArcReach**, **ArcQual**, **ArcBoard**, **ArcDesk**, and **ArcPulse** — each handling a distinct stage of the revenue pipeline, from outbound prospecting to customer success.
+
+## Tech Stack
+
+| Layer     | Technology |
+
+
+| Framework | Next.js 16 (Pages Router) |
+| UI | React 19, Tailwind CSS 4 |
+| Animation | Framer Motion 12, GSAP 3 |
+| 3D | Three.js, React Three Fiber |
+| Charts | Recharts |
+| Auth | NextAuth 4 (Google, GitHub, Credentials) |
+| Email | EmailJS |
+
+## Pages
+
+- `/` — Hero, agent carousel, stats, case studies, testimonials
+- `/products` — Five AI agents with feature breakdowns
+- `/industries` — Industry-specific use cases
+- `/pricing` — Plans and tiers
+- `/case-studies` — Enterprise success stories
+- `/about` — Team, values, company story
+- `/blog` — Blog with dynamic slug routing
+- `/contact` — Contact form
+- `/careers` — Open roles
+- `/login` — Authentication (supports OAuth + credentials)
+- `/security`, `/privacy-policy`, `/terms-of-service` — Legal pages
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Create a `.env.local` file:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```env
+NEXTAUTH_SECRET=your_secret
+NEXTAUTH_URL=http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-## Learn More
+GITHUB_ID=your_github_id
+GITHUB_SECRET=your_github_secret
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+> **Demo mode:** The credentials provider accepts any email/password combination.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```
+arcagent/
+├── pages/          # Next.js pages and API routes
+├── components/     # Reusable UI and section components
+├── lib/            # Data fetching helpers (agents, case studies, etc.)
+├── public/         # Static assets
+└── styles/         # Global CSS
+```
